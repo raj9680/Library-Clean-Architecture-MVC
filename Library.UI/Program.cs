@@ -2,23 +2,22 @@ using Library.Infrastructure.Data;
 using Library.Infrastructure.Database;
 using Library.UI;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddDI(builder.Configuration); // All DI Registerations
 
 var app = builder.Build();
 
-// All DI's
-builder.Services.AddDI(builder.Configuration);
-
-
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (builder.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
+    app.UseDeveloperExceptionPage();
 }
 
 #region Database Initializer
-// DB Initialiser
+
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
@@ -31,7 +30,14 @@ using (var scope = app.Services.CreateScope())
         runMigrations,
         runSqlScripts);
 }
+
 #endregion
 
+app.UseStaticFiles();
+app.UseRouting();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Dashboard}/{action=Index}/{id?}");
 
 app.Run();

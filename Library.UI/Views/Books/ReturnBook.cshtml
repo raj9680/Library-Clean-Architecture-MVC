@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main class="main-content" id="mainContent">
+    <div class="page-header">
+        <h1>Return Book</h1>
+    </div>
+
+    <div class="toolbar">
+        <input type="search" class="form-control form-control-sm" style="max-width: 280px;" placeholder="Search by member or book..." />
+        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-search"></i> Search</button>
+    </div>
+
+    <div class="panel">
+        <div class="panel-body">
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Member</label>
+                    <input type="text" class="form-control" value="Simran Kaur" readonly />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Book</label>
+                    <input type="text" class="form-control" value="Principles of Database Design" readonly />
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Issue Date</label>
+                    <input type="date" class="form-control" value="2026-06-25" readonly />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Due Date</label>
+                    <input type="date" class="form-control" value="2026-07-09" readonly />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Return Date</label>
+                    <input type="date" class="form-control" />
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Fine</label>
+                    <input type="text" class="form-control" placeholder="Calculated automatically" readonly />
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary"><i class="bi bi-box-arrow-in-left"></i> Return Book</button>
+                <a href="dashboard.html" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
+            </div>
+        </div>
+    </div>
+</main>

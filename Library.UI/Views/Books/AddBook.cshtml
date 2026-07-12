@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main class="main-content" id="mainContent">
+    <div class="page-header">
+        <h1>Add / Edit Book</h1>
+    </div>
+
+    <div class="panel">
+        <div class="panel-body">
+            <form>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Title</label>
+                        <input type="text" class="form-control" placeholder="e.g. The Silent Observer" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">ISBN</label>
+                        <input type="text" class="form-control" placeholder="e.g. 978-0-123456-01-1" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Category</label>
+                        <select class="form-select">
+                            <option value="">Select Category</option>
+                            <option>Fiction</option>
+                            <option>Computer Science</option>
+                            <option>History</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Author</label>
+                        <select class="form-select">
+                            <option value="">Select Author</option>
+                            <option>J. Harmon</option>
+                            <option>R. Nair</option>
+                            <option>S. Gill</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Publisher</label>
+                        <input type="text" class="form-control" placeholder="e.g. Northfield Press" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Publish Date</label>
+                        <input type="date" class="form-control" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Total Copies</label>
+                        <input type="number" class="form-control" min="0" placeholder="0" />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Available Copies</label>
+                        <input type="number" class="form-control" min="0" placeholder="0" />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Shelf Number</label>
+                        <input type="text" class="form-control" placeholder="e.g. A-12" />
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" rows="4" placeholder="Short description of the book..."></textarea>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Cover Image</label>
+                        <input type="file" class="form-control" accept="image/*" />
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Save</button>
+                    <a href="books.html" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

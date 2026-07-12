@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main class="main-content" id="mainContent">
+    <div class="page-header">
+        <h1>Issue Book</h1>
+    </div>
+
+    <div class="panel">
+        <div class="panel-body">
+            <form>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Select Member</label>
+                        <select class="form-select">
+                            <option value="">Choose a member...</option>
+                            <option>Amanpreet Kaur</option>
+                            <option>Rohit Sharma</option>
+                            <option>Simran Kaur</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Select Book</label>
+                        <select class="form-select">
+                            <option value="">Choose a book...</option>
+                            <option>The Silent Observer</option>
+                            <option>Principles of Database Design</option>
+                            <option>A History of Modern Punjab</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Issue Date</label>
+                        <input type="date" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Due Date</label>
+                        <input type="date" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-box-arrow-right"></i> Issue Book</button>
+                    <a href="dashboard.html" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TnFsOcW2jNBZ0GW2pXEO7Efsy9Z6hC0Mh93p0dilHUc=",
+  "Hash": "AHJYOS+wEzk2Dl/wWP8o5VCobZvVLrMvgMjmf7nGwNw=",
   "Source": "Library.UI",
   "BasePath": "_content/Library.UI",
   "Mode": "Default",
@@ -10,10 +10,49 @@
     {
       "Name": "Library.UI\\wwwroot",
       "Source": "Library.UI",
-      "ContentRoot": "C:\\Users\\aryan\\OneDrive\\ドキュメント\\NET CORE\\Library Management System\\LibrarySolution\\Library.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\",
       "BasePath": "_content/Library.UI",
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\css\\style.css",
+      "SourceId": "Library.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\",
+      "BasePath": "_content/Library.UI",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\js\\app.js",
+      "SourceId": "Library.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\",
+      "BasePath": "_content/Library.UI",
+      "RelativePath": "js/app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\app.js"
+    }
+  ]
 }

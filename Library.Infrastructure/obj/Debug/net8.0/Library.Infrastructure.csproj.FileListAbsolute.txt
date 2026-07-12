@@ -15,3 +15,21 @@ C:\Users\aryan\OneDrive\ドキュメント\NET CORE\Library Management System\Li
 C:\Users\aryan\OneDrive\ドキュメント\NET CORE\Library Management System\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\refint\Library.Infrastructure.dll
 C:\Users\aryan\OneDrive\ドキュメント\NET CORE\Library Management System\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.pdb
 C:\Users\aryan\OneDrive\ドキュメント\NET CORE\Library Management System\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\ref\Library.Infrastructure.dll
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\bin\Debug\net8.0\Library.Infrastructure.deps.json
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\bin\Debug\net8.0\Library.Infrastructure.dll
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\bin\Debug\net8.0\Library.Infrastructure.pdb
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\bin\Debug\net8.0\Library.Application.dll
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\bin\Debug\net8.0\Library.Domain.dll
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\bin\Debug\net8.0\Library.Application.pdb
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\bin\Debug\net8.0\Library.Domain.pdb
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.AssemblyInfo.cs
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.sourcelink.json
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library..FAF1E3BF.Up2Date
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.dll
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\refint\Library.Infrastructure.dll
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.pdb
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\ref\Library.Infrastructure.dll

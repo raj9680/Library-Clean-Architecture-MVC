@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main class="main-content" id="mainContent">
+    <div class="page-header">
+        <h1>Profile</h1>
+    </div>
+
+    <div class="panel">
+        <div class="panel-body">
+            <div class="row g-4">
+                <div class="col-md-3 text-center">
+                    <img class="profile-photo" src="https://via.placeholder.com/96?text=Admin" alt="Profile photo" />
+                    <div class="mt-2">
+                        <input type="file" class="form-control form-control-sm" accept="image/*" />
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" value="Admin User" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" value="admin@library.com" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Phone</label>
+                                <input type="text" class="form-control" placeholder="e.g. +91 98765 43210" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Role</label>
+                                <input type="text" class="form-control" value="Administrator" readonly />
+                            </div>
+                        </div>
+
+                        <div class="form-section-title"><i class="bi bi-shield-lock"></i> Change Password</div>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Current Password</label>
+                                <input type="password" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">New Password</label>
+                                <input type="password" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Save Changes</button>
+                            <a href="dashboard.html" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

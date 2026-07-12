@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zGr0P1kywpLAahx2XYx54iEJ51p4V2HPBZbbtMntpa65szszMuYCDkbDaYbbuJhYBjoVb3tEavgVW/kgAkOa5Q==",
+  "dgSpecHash": "nkwbsH6yUlbgjP/t0hQBYM0tsb/2/N+0HTGcsHEOeoeXEDlzqpvXtuZ4Cyl2zex/kS/oFRgZF4VdZuLN5Bx/yQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aryan\\OneDrive\\ドキュメント\\NET CORE\\Library Management System\\LibrarySolution\\Library.Infrastructure\\Library.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.Infrastructure\\Library.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aryan\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\aryan\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

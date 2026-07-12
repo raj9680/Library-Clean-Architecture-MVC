@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main class="main-content" id="mainContent">
+    <div class="page-header">
+        <h1>Members</h1>
+        <a asp-controller="Members" asp-action="AddMember" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg"></i> Add Member</a>
+    </div>
+
+    <div class="toolbar">
+        <input type="search" class="form-control form-control-sm" style="max-width: 280px;" placeholder="Search by name, email or phone..." />
+        <select class="form-select form-select-sm" style="max-width: 160px;">
+            <option value="">All Status</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+        </select>
+        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-search"></i> Search</button>
+    </div>
+
+    <div class="panel">
+        <div class="panel-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Photo</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><img class="table-photo-thumb" src="https://via.placeholder.com/42?text=A" alt="Photo" /></td>
+                            <td>Amanpreet Kaur</td>
+                            <td>amanpreet.kaur@example.com</td>
+                            <td>+91 98765 43210</td>
+                            <td><span class="badge badge-status-active">Active</span></td>
+                            <td class="action-icons">
+                                <a href="#" title="View" data-bs-toggle="modal" data-bs-target="#memberViewModal1"><i class="bi bi-eye"></i></a>
+                                <a asp-controller="Members" asp-action="EditMember" title="Edit"><i class="bi bi-pencil"></i></a>
+                                <a href="#" class="btn-delete text-danger" data-name="Amanpreet Kaur" title="Delete"><i class="bi bi-trash"></i></a>
+                            </td>
+                        </tr>
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <nav aria-label="Members pagination">
+        <ul class="pagination pagination-sm justify-content-end">
+            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+</main>

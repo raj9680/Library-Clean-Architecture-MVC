@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="main-content" id="mainContent">
+    <div class="page-header">
+        <h1>Categories</h1>
+        <a asp-controller="Categories" asp-action="AddCategory" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg"></i> Add Category</a>
+    </div>
+
+    <div class="toolbar">
+        <input type="search" class="form-control form-control-sm" style="max-width: 280px;" placeholder="Search categories..." />
+        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-search"></i> Search</button>
+    </div>
+
+    <div class="panel">
+        <div class="panel-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Category Name</th>
+                            <th>Books Count</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Fiction</td>
+                            <td>412</td>
+                            <td class="action-icons">
+                                <a asp-controller="Categories" asp-action="EditCategory" title="Edit"><i class="bi bi-pencil"></i></a>
+                                <a asp-controller="Categories" asp-action="DeleteCategory" class="btn-delete text-danger" data-name="Fiction" title="Delete"><i class="bi bi-trash"></i></a>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>

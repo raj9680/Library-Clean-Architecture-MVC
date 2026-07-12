@@ -11,10 +11,4 @@
     <ProjectReference Include="..\Library.Infrastructure\Library.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="wwwroot\" />
-    <Folder Include="Views\" />
-  </ItemGroup>
-
 </Project>

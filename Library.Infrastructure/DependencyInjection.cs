@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Library.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Library.Infrastructure
 {
@@ -6,8 +8,8 @@ namespace Library.Infrastructure
     {
         public static IServiceCollection AddInfrastructureDI(this IServiceCollection services, string configuration)
         {
-            //services.AddDbContext<PersonDbContext>(options =>
-            //options.UseSqlServer(connectionString));
+            services.AddDbContext<DatabaseContext>(options =>
+            options.UseSqlServer(configuration));
 
             return services;
         }

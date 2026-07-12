@@ -1,0 +1,460 @@
+/* ==========================================================================
+   Library Management System - Main Stylesheet
+   Style: Clean, minimal, neutral, classic "windowed software" look
+   ========================================================================== */
+
+:root {
+  --color-bg: #f0f0ef;
+  --color-surface: #ffffff;
+  --color-border: #c9c9c7;
+  --color-border-dark: #a9a9a7;
+  --color-text: #2b2b2b;
+  --color-text-muted: #6b6b6b;
+  --color-primary: #3f5872;
+  --color-primary-dark: #32485f;
+  --color-header-bg: #e7e6e3;
+  --color-sidebar-bg: #eceae6;
+  --color-sidebar-active: #dcdad5;
+  --color-footer-bg: #e7e6e3;
+  --sidebar-width: 220px;
+  --header-height: 56px;
+  --footer-height: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.app-header {
+  height: var(--header-height);
+  background-color: var(--color-header-bg);
+  border-bottom: 1px solid var(--color-border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-header .brand {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.app-header .user-name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.sidebar-toggle-btn {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-dark);
+  border-radius: 2px;
+  padding: 4px 9px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.sidebar-toggle-btn:hover {
+  background-color: var(--color-sidebar-active);
+}
+
+/* ==========================================================================
+   Layout wrapper
+   ========================================================================== */
+
+.app-wrapper {
+  display: flex;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.app-sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--color-sidebar-bg);
+  border-right: 1px solid var(--color-border-dark);
+  flex-shrink: 0;
+  transition: margin-left 0.15s ease-in-out;
+}
+
+.app-sidebar .nav-title {
+  padding: 10px 14px 6px 14px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.app-sidebar .nav {
+  padding: 6px 0;
+}
+
+.app-sidebar .nav-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.app-sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  color: var(--color-text);
+  border-left: 3px solid transparent;
+}
+
+.app-sidebar .nav-link:hover {
+  background-color: var(--color-sidebar-active);
+  text-decoration: none;
+}
+
+.app-sidebar .nav-link.active {
+  background-color: var(--color-sidebar-active);
+  border-left: 3px solid var(--color-primary);
+  font-weight: 600;
+}
+
+.app-sidebar .nav-link .icon {
+  width: 16px;
+  display: inline-block;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* Collapsed sidebar (desktop) */
+body.sidebar-collapsed .app-sidebar {
+  margin-left: calc(var(--sidebar-width) * -1);
+}
+
+/* Mobile sidebar */
+@media (max-width: 768px) {
+  .app-sidebar {
+    position: fixed;
+    top: var(--header-height);
+    bottom: var(--footer-height);
+    left: 0;
+    z-index: 999;
+    margin-left: calc(var(--sidebar-width) * -1);
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.15);
+  }
+
+  body.sidebar-mobile-open .app-sidebar {
+    margin-left: 0;
+  }
+
+  body.sidebar-collapsed .app-sidebar {
+    margin-left: calc(var(--sidebar-width) * -1);
+  }
+}
+
+/* ==========================================================================
+   Main content
+   ========================================================================== */
+
+.main-content {
+  flex-grow: 1;
+  padding: 18px;
+  min-width: 0;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.page-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+/* ==========================================================================
+   Panels / Cards (kept plain, no shadows/gradients)
+   ========================================================================== */
+
+.panel {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-dark);
+  border-radius: 2px;
+  margin-bottom: 18px;
+}
+
+.panel-header {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-header-bg);
+  font-weight: 600;
+}
+
+.panel-body {
+  padding: 14px;
+}
+
+.stat-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-dark);
+  border-radius: 2px;
+  padding: 14px;
+  text-align: left;
+}
+
+.stat-card .stat-label {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.stat-card .stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: var(--color-header-bg);
+  border-bottom: 1px solid var(--color-border-dark);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.table-cover-thumb {
+  width: 40px;
+  height: 54px;
+  object-fit: cover;
+  border: 1px solid var(--color-border-dark);
+  background-color: var(--color-bg);
+}
+
+.table-photo-thumb {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-dark);
+  background-color: var(--color-bg);
+}
+
+.action-icons a {
+  margin-right: 8px;
+  color: var(--color-text-muted);
+}
+
+.action-icons a:hover {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+.form-label {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.form-section-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+  margin: 14px 0 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.form-actions {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 8px;
+}
+
+/* Remove Bootstrap's default focus glow on all form elements;
+   use a plain black outline instead. */
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus,
+textarea.form-control:focus,
+.btn:focus,
+.btn:focus-visible,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #000;
+  outline: auto;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   Buttons (kept flat/classic)
+   ========================================================================== */
+
+.btn {
+  border-radius: 2px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn-outline-secondary {
+  color: var(--color-text);
+  border-color: var(--color-border-dark);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.app-footer {
+  height: var(--footer-height);
+  background-color: var(--color-footer-bg);
+  border-top: 1px solid var(--color-border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Login page
+   ========================================================================== */
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  padding: 16px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-dark);
+  border-radius: 2px;
+}
+
+.login-card .login-card-header {
+  background-color: var(--color-header-bg);
+  border-bottom: 1px solid var(--color-border-dark);
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.login-card .login-card-body {
+  padding: 20px;
+}
+
+/* ==========================================================================
+   Profile page
+   ========================================================================== */
+
+.profile-photo {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-dark);
+  background-color: var(--color-bg);
+}
+
+/* ==========================================================================
+   Utility
+   ========================================================================== */
+
+.text-muted-sm {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.badge-status-active {
+  background-color: #4a7043;
+  color: #fff;
+}
+
+.badge-status-inactive {
+  background-color: #8a8a88;
+  color: #fff;
+}
