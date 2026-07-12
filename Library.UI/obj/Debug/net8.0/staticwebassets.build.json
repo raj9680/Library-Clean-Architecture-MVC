@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "TnFsOcW2jNBZ0GW2pXEO7Efsy9Z6hC0Mh93p0dilHUc=",
+  "Source": "Library.UI",
+  "BasePath": "_content/Library.UI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Library.UI\\wwwroot",
+      "Source": "Library.UI",
+      "ContentRoot": "C:\\Users\\aryan\\OneDrive\\ドキュメント\\NET CORE\\Library Management System\\LibrarySolution\\Library.UI\\wwwroot\\",
+      "BasePath": "_content/Library.UI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

@@ -1,0 +1,9 @@
+﻿Library.Domain
+│
+├── Entities
+│     ├── Country.cs
+│     └── Person.cs
+│
+├── Common (optional later)
+├── ValueObjects (optional)
+└── Interfaces (optional)

@@ -1,0 +1,22 @@
+﻿
+
+Library.Infrastructure
+│
+├── Data
+│     ├── PersonDbContext.cs
+│     └── Migrations
+│
+├── Services
+│     ├── CountriesService.cs
+│     └── PersonService.cs
+│
+├── Helpers
+│
+└── DependencyInjection.cs
+
+
+Infrastructure references Application because
+
+PersonService : IPersonService
+
+implements the interfaces defined in Application.

@@ -1,0 +1,30 @@
+﻿
+Library.Application
+│
+├── DTOs
+│
+├── Interfaces
+│     ├── ICountriesService.cs
+│     └── IPersonService.cs
+│
+├── Enums
+│
+├── Mapping (optional later)
+│
+├── Validators (later)
+│
+└── DependencyInjection.cs
+
+
+
+Application Layers should contains:
+
+DTOs
+Interfaces
+Business Rules
+Validators
+AutoMapper Profiles
+FluentValidation
+Use Cases
+
+No EF Core here

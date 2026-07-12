@@ -1,0 +1,36 @@
+﻿The Configurations folder contains classes that configure your entities using the Fluent API instead of putting everything inside OnModelCreating().
+
+__
+
+INSTEAD OF WRITING: 
+
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<Person>()
+        .Property(p => p.PersonName)
+        .HasMaxLength(50);
+
+    modelBuilder.Entity<Person>()
+        .Property(p => p.Email)
+        .HasMaxLength(100);
+
+    modelBuilder.Entity<Person>()
+        .HasIndex(p => p.Email)
+        .IsUnique();
+
+    // Hundreds of lines...
+}
+
+you create one class per entity.
+=====================================
+
+Library.Infrastructure
+│
+└── Data
+    ├── Configurations
+    │     ├── PersonConfiguration.cs
+    │     ├── CountryConfiguration.cs
+    │     └── UserConfiguration.cs
+    │
+    ├── DatabaseContext.cs
+    └── Migrations

@@ -1,0 +1,17 @@
+﻿using Library.Application;
+using Library.Infrastructure;
+
+namespace Library.UI
+{
+    public static class DependencyInjection
+    {
+        public static IServiceCollection AddDI(this IServiceCollection services, IConfiguration configuration)
+        {
+            string connectionString = configuration.GetConnectionString("DefaultConnection")!;
+
+            services.AddApplicationDI()
+                .AddInfrastructureDI(connectionString);
+            return services;
+        }
+    }
+}

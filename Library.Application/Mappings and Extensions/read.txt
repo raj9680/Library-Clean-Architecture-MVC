@@ -1,0 +1,73 @@
+﻿1. Mappings
+Purpose: Convert one object into another object.
+
+Examples:
+
+PersonAddRequest  ---> Person
+Person            ---> PersonResponse
+Country           ---> CountryResponse
+Order             ---> OrderResponse
+
+
+Example:
+
+public static class PersonMappings
+{
+    public static Person ToPerson(this PersonAddRequest request)
+    {
+        return new Person
+        {
+            PersonName = request.PersonName,
+            Email = request.Email
+        };
+    }
+
+    public static PersonResponse ToPersonResponse(this Person person)
+    {
+        return new PersonResponse
+        {
+            PersonID = person.PersonID,
+            PersonName = person.PersonName
+        };
+    }
+}
+
+Rule: Mapping classes only transform objects.
+
+
+
+2. Extensions
+Purpose: Add extra functionality to an existing class or type.
+
+Examples:
+
+1. String Extension
+===================
+
+public static class StringExtensions
+{
+    public static bool IsValidEmail(this string email)
+    {
+        return email.Contains("@");
+    }
+}
+
+Usage:
+bool valid = email.IsValidEmail();
+
+
+2. DateTime Extension
+======================
+
+public static class DateTimeExtensions
+{
+    public static int CalculateAge(this DateTime dob)
+    {
+        var age = DateTime.Today.Year - dob.Year;
+        return age;
+    }
+}
+
+
+Usage:
+int age = person.DateOfBirth.CalculateAge();

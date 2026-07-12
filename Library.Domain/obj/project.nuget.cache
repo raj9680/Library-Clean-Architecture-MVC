@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "OTVM57L6RvWlUWcPxpF8LCBFF4THcC1eUGnZ79bBhFZqlMAApWVAjot/LPCuu0ZiYtuK+4MwyLz4qRr/upwHYQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aryan\\OneDrive\\ドキュメント\\NET CORE\\Library Management System\\LibrarySolution\\Library.Domain\\Library.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aryan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.9\\microsoft.extensions.dependencyinjection.abstractions.10.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
