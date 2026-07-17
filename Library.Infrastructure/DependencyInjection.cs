@@ -8,7 +8,7 @@ namespace Library.Infrastructure
     {
         public static IServiceCollection AddInfrastructureDI(this IServiceCollection services, string configuration)
         {
-            services.AddDbContext<DatabaseContext>(options =>
+            services.AddDbContext<LibraryDbContext>(options =>
             options.UseSqlServer(configuration));
 
             return services;

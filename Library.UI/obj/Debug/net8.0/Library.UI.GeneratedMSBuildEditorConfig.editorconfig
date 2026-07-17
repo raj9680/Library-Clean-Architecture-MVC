@@ -9,91 +9,91 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Library.UI
 build_property.RootNamespace = Library.UI
-build_property.ProjectDir = C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.UI\
+build_property.ProjectDir = C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.UI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.UI
+build_property.MSBuildProjectDirectory = C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Authors/AddAuthor.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Authors/AddAuthor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xBZGRBdXRob3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Authors/EditAuthor.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Authors/EditAuthor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xFZGl0QXV0aG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Authors/Index.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Authors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Books/AddBook.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Books/AddBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQWRkQm9vay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Books/EditBook.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Books/EditBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRWRpdEJvb2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Books/Index.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Books/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Books/IssueBook.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Books/IssueBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcSXNzdWVCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Books/ReturnBook.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Books/ReturnBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcUmV0dXJuQm9vay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Categories/AddCategory.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Categories/AddCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xBZGRDYXRlZ29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Categories/EditCategory.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Categories/EditCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0Q2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Categories/Index.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Dashboard/Index.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Login/Index.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Members/AddMember.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Members/AddMember.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xBZGRNZW1iZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Members/EditMember.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Members/EditMember.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xFZGl0TWVtYmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Members/Index.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Members/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Profile/Index.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Profile/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Shared/_Layout-initial.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Shared/_Layout-initial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQtaW5pdGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/Shared/_Layout.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryan/OneDrive/Desktop/Library-Clean-Architecture-MVC/Library.UI/Views/_ViewImports.cshtml]
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

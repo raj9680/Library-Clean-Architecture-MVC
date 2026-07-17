@@ -1,0 +1,32 @@
+[
+  {
+    "Id": "3CC7B4E7-DEAC-41EB-BA19-FDC5F6B742D9",
+    "Name": "John",
+    "CountryId": "A2CB201D-E9B4-46B9-837E-A9F753315035",
+    "Biography": "BCA student passionate about coding, web development, and learning new technologies."
+  },
+  {
+    "Id": "C50B07DC-D147-4889-A49B-6E659C9FEAAE",
+    "Name": "Emma",
+    "CountryId": "A2CB201D-E9B4-46B9-837E-A9F753315035",
+    "Biography": "Commerce student interested in finance, accounting, and business management."
+  },
+  {
+    "Id": "6DBC958B-2971-484A-9DE8-7CDE12691C1A",
+    "Name": "Nita",
+    "CountryId": "D081FC61-B2AE-4FAA-82BD-45CA471C845B",
+    "Biography": "Engineering student who enjoys robotics, innovation, and solving technical problems."
+  },
+  {
+    "Id": "112B8154-7438-4D0A-A7C2-9017E0EB5BC6",
+    "Name": "Allen",
+    "CountryId": "AB7365BF-3AEF-4635-A4C0-1E45B8001FAB",
+    "Biography": "Biology student aspiring to become a medical researcher and healthcare professional."
+  },
+  {
+    "Id": "CF198037-E514-45F7-92ED-6AFC02845899",
+    "Name": "Chris",
+    "CountryId": "31949902-E796-4262-9E96-6555E20FF555",
+    "Biography": "High school student passionate about mathematics, coding, and computer science."
+  }
+]

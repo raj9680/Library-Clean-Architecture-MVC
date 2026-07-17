@@ -23,3 +23,16 @@ C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Domain\ob
 C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\refint\Library.Domain.dll
 C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\Library.Domain.pdb
 C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\ref\Library.Domain.dll
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\bin\Debug\net8.0\Library.Domain.deps.json
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\bin\Debug\net8.0\Library.Domain.dll
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\bin\Debug\net8.0\Library.Domain.pdb
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\Library.Domain.csproj.AssemblyReference.cache
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\Library.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\Library.Domain.AssemblyInfoInputs.cache
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\Library.Domain.AssemblyInfo.cs
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\Library.Domain.csproj.CoreCompileInputs.cache
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\Library.Domain.sourcelink.json
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\Library.Domain.dll
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\refint\Library.Domain.dll
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\Library.Domain.pdb
+C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Domain\obj\Debug\net8.0\ref\Library.Domain.dll

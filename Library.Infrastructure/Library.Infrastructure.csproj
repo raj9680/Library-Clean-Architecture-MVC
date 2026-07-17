@@ -6,7 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  
+
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.9" />
   </ItemGroup>
@@ -20,14 +26,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Database\Functions\" />
-    <Folder Include="Database\Seed\" />
-    <Folder Include="Database\Views\" />
-    <Folder Include="Database\StoredProcedures\" />
-    <Folder Include="Data\Migrations\" />
+    <Folder Include="Data\Scripts\" />
+    <Folder Include="Data\Sql\Functions\" />
+    <Folder Include="Data\Sql\Indexes\" />
+    <Folder Include="Data\Sql\Views\" />
+    <Folder Include="Data\Sql\StoredProcedures\" />
     <Folder Include="ExternalAPIs\" />
-    <Folder Include="Persistence\UnitOfWork\" />
-    <Folder Include="Persistence\Repositories\" />
+    <Folder Include="Repositories\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

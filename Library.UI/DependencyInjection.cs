@@ -9,6 +9,9 @@ namespace Library.UI
         {
             string connectionString = configuration.GetConnectionString("DefaultConnection")!;
 
+    //string connectionString =
+    //configuration["ConnectionStrings:DefaultConnection"]!;
+
             services.AddApplicationDI()
                 .AddInfrastructureDI(connectionString);
             return services;

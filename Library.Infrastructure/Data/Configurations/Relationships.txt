@@ -1,0 +1,110 @@
+﻿Relationships:
+
+1. One-to-Many (Most Common)
+Example
+
+One Author → Many Books
+
+Author (1)
+   |
+   |------< Book (Many)
+Entities
+public class Author
+{
+    public Guid Id { get; set; }
+
+    public ICollection<Book> Books { get; set; } = new();
+}
+
+public class Book
+{
+    public Guid Id { get; set; }
+
+    public Guid AuthorId { get; set; }
+
+    public Author Author { get; set; } = null!;
+}
+Fluent API
+entity.HasOne(x => x.Author)
+      .WithMany(x => x.Books)
+      .HasForeignKey(x => x.AuthorId);
+
+Read it as:
+
+Book has one Author.
+
+Author has many Books.
+
+AuthorId is the foreign key.
+
+2. One-to-One
+Example
+
+One User → One Profile
+
+User (1)
+    |
+    |
+Profile (1)
+Entities
+public class User
+{
+    public Guid Id { get; set; }
+
+    public Profile Profile { get; set; } = null!;
+}
+
+public class Profile
+{
+    public Guid Id { get; set; }
+
+    public Guid UserId { get; set; }
+
+    public User User { get; set; } = null!;
+}
+Fluent API
+entity.HasOne(x => x.User)
+      .WithOne(x => x.Profile)
+      .HasForeignKey<Profile>(x => x.UserId);
+
+Read it as:
+
+Profile has one User.
+
+User has one Profile.
+
+UserId is the foreign key.
+
+3. Many-to-Many (EF Core 5+)
+Example
+
+One Student ↔ Many Courses
+
+Student
+    *------*
+      Course
+Entities
+public class Student
+{
+    public Guid Id { get; set; }
+
+    public ICollection<Course> Courses { get; set; } = new();
+}
+
+public class Course
+{
+    public Guid Id { get; set; }
+
+    public ICollection<Student> Students { get; set; } = new();
+}
+Fluent API
+entity.HasMany(x => x.Courses)
+      .WithMany(x => x.Students);
+
+Read it as:
+
+Student has many Courses.
+
+Course has many Students.
+
+EF Core automatically creates the junction table.

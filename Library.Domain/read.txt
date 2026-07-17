@@ -1,4 +1,6 @@
-﻿Library.Domain
+﻿To change Migration Directory Location: Add-Migration InitialCreate -OutputDir Data\Migrations
+
+Library.Domain
 │
 ├── Entities
 │     ├── Country.cs

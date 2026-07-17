@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AHJYOS+wEzk2Dl/wWP8o5VCobZvVLrMvgMjmf7nGwNw=",
+  "Hash": "/Hb0o35MkAqSsajkZeHxw6rvKgR405qEc0JFE9Eveso=",
   "Source": "Library.UI",
   "BasePath": "_content/Library.UI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Library.UI\\wwwroot",
       "Source": "Library.UI",
-      "ContentRoot": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\",
       "BasePath": "_content/Library.UI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\css\\style.css",
+      "Identity": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\css\\style.css",
       "SourceId": "Library.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\",
       "BasePath": "_content/Library.UI",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\js\\app.js",
+      "Identity": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\js\\app.js",
       "SourceId": "Library.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\",
       "BasePath": "_content/Library.UI",
       "RelativePath": "js/app.js",
       "AssetKind": "All",
