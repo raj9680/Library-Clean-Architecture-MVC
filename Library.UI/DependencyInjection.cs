@@ -1,5 +1,7 @@
 ﻿using Library.Application;
+using Library.Application.Interfaces;
 using Library.Infrastructure;
+using Library.Infrastructure.Services.TempService;
 
 namespace Library.UI
 {
@@ -14,6 +16,9 @@ namespace Library.UI
 
             services.AddApplicationDI()
                 .AddInfrastructureDI(connectionString);
+            services.AddScoped<IDashboardService, DashboardService>();
+            services.AddScoped<IBookService, BookService>();
+            services.AddScoped<ICategoryService, CategoryService>();
             return services;
         }
     }

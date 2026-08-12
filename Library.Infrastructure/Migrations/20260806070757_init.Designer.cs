@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Library.Infrastructure.Data.Migrations
+namespace Library.Infrastructure.Migrations
 {
     [DbContext(typeof(LibraryDbContext))]
-    [Migration("20260717120423_Init")]
-    partial class Init
+    [Migration("20260806070757_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -99,7 +99,7 @@ namespace Library.Infrastructure.Data.Migrations
 
                     b.HasIndex("ImageId");
 
-                    b.ToTable("Book");
+                    b.ToTable("Books", (string)null);
                 });
 
             modelBuilder.Entity("Library.Domain.Entities.BookTransaction", b =>
@@ -132,7 +132,7 @@ namespace Library.Infrastructure.Data.Migrations
 
                     b.HasIndex("MemberId");
 
-                    b.ToTable("BookTransaction");
+                    b.ToTable("BookTransactions");
                 });
 
             modelBuilder.Entity("Library.Domain.Entities.Category", b =>
@@ -149,7 +149,7 @@ namespace Library.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("Library.Domain.Entities.Country", b =>
@@ -177,7 +177,7 @@ namespace Library.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Image");
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Library.Domain.Entities.Member", b =>
@@ -216,7 +216,7 @@ namespace Library.Infrastructure.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("Member");
+                    b.ToTable("Members");
                 });
 
             modelBuilder.Entity("Library.Domain.Entities.Role", b =>
@@ -230,7 +230,7 @@ namespace Library.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Role");
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("Library.Domain.Entities.Author", b =>

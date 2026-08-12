@@ -86,6 +86,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Shared/Components/CategoryDropdown/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcnlEcm9wZG93blxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Shared/_CategoryPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXRlZ29yeVBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/raj.kumar/Documents/Library-Clean-Architecture-MVC/Library.UI/Views/Shared/_Layout-initial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQtaW5pdGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,21 @@
+[
+  {
+    "Id": "DD3C0E22-4DD7-4DB3-9F8E-C5FA6662CF47",
+    "Name": "Programming",
+    "Description": "This category specifies the books related to programming."
+  },
+  {
+    "Id": "6CF699A5-CB39-4913-8505-7275A0E6FCE8",
+    "Name": "Science",
+    "Description": "This category specifies the books related to science."
+  },
+  {
+    "Id": "2567250E-066B-4E83-B1E4-AC836DE9468D",
+    "Name": "This category specifies the books related to DBMS."
+  },
+  {
+    "Id": "A862CCB4-C04D-4F7D-89BA-25F6FC0FB14A",
+    "Name": "Operating Systems",
+    "DBMS": "This category specifies the books related to OS."
+  }
+]

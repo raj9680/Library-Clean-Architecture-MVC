@@ -1,0 +1,46 @@
+[
+  {
+    "Id": "F0EAD286-E129-4B63-8A26-B5E54A1AED77",
+    "Name": "John",
+    "Email": "john@email.com",
+    "Phone": "+1 9898989898",
+    "Status": "Active",
+    "Address": "ABC Suite, XYZ City, AB CA",
+    "ImageId": "DD9F03F6-5953-4EA1-AE15-8902EB5835D2",
+    "RoleId": "AB2FCE3D-66AD-4B2E-80A6-D37745DF33D7",
+    "Password": "admin"
+  },
+  {
+    "Id": "77A01046-FE2A-400F-9994-D6C8C48575A2",
+    "Name": "Shweta",
+    "Email": "shweta@email.com",
+    "Phone": "+2 9898989898",
+    "Status": "Inactive",
+    "Address": "DEF Suite, 001 City, NY USA",
+    "ImageId": "DD9F03F6-5953-4EA1-AE15-8902EB5835D2",
+    "RoleId": "4026EAAF-5F11-4E14-A055-613D0A4423C6",
+    "Password": "student"
+  },
+  {
+    "Id": "45314CC7-8A52-46B4-99FD-4F601BB25DC4",
+    "Name": "Bella",
+    "Email": "bella@email.com",
+    "Phone": "+3 9898989898",
+    "Status": "Active",
+    "Address": "DEF Suite, 001 City, NY USA",
+    "ImageId": "DD9F03F6-5953-4EA1-AE15-8902EB5835D2",
+    "RoleId": "923CFCC1-45EC-410B-9B38-6CD98934DE74",
+    "Password": "manager"
+  },
+  {
+    "Id": "4647E5FA-C469-4A37-8A29-B2E965CDAEA4",
+    "Name": "Amanda",
+    "Email": "amanda@email.com",
+    "Phone": "+4 9898989898",
+    "Status": "Active",
+    "Address": "DEF Suite, 001 City, NY USA",
+    "ImageId": "DD9F03F6-5953-4EA1-AE15-8902EB5835D2",
+    "RoleId": "4026EAAF-5F11-4E14-A055-613D0A4423C6",
+    "Password": "student"
+  }
+]

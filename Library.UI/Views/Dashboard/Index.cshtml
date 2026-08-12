@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Library.Application.DTOs.DashboardDto
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,25 +14,25 @@
         <div class="col-6 col-md-3">
             <div class="stat-card">
                 <div class="stat-label"><i class="bi bi-book"></i> Total Books</div>
-                <div class="stat-value">1,248</div>
+                <div class="stat-value">@Model.TotalBooks</div>
             </div>
         </div>
         <div class="col-6 col-md-3">
             <div class="stat-card">
                 <div class="stat-label"><i class="bi bi-people"></i> Total Members</div>
-                <div class="stat-value">356</div>
+                <div class="stat-value">@Model.TotalMembers</div>
             </div>
         </div>
         <div class="col-6 col-md-3">
             <div class="stat-card">
                 <div class="stat-label"><i class="bi bi-box-arrow-right"></i> Issued Books</div>
-                <div class="stat-value">87</div>
+                <div class="stat-value">@Model.IssuedBooks</div>
             </div>
         </div>
         <div class="col-6 col-md-3">
             <div class="stat-card">
                 <div class="stat-label"><i class="bi bi-check2-square"></i> Available Books</div>
-                <div class="stat-value">1,161</div>
+                <div class="stat-value">@Model.AvailableBooks</div>
             </div>
         </div>
     </div>
@@ -51,34 +53,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>The Silent Observer</td>
-                            <td>978-0-123456-01-1</td>
-                            <td>Fiction</td>
-                            <td>J. Harmon</td>
-                            <td>2026-07-05</td>
-                        </tr>
-                        <tr>
-                            <td>Principles of Database Design</td>
-                            <td>978-0-123456-02-2</td>
-                            <td>Computer Science</td>
-                            <td>R. Nair</td>
-                            <td>2026-07-04</td>
-                        </tr>
-                        <tr>
-                            <td>A History of Modern Punjab</td>
-                            <td>978-0-123456-03-3</td>
-                            <td>History</td>
-                            <td>S. Gill</td>
-                            <td>2026-07-02</td>
-                        </tr>
-                        <tr>
-                            <td>Introduction to Algorithms</td>
-                            <td>978-0-123456-04-4</td>
-                            <td>Computer Science</td>
-                            <td>T. Cormen</td>
-                            <td>2026-06-29</td>
-                        </tr>
+                        @foreach (var item in Model.RecentlyAddedBooks)
+                        {
+                            <tr>
+                                <td>@item.BookTitle</td>
+                                <td>@item.ISBN</td>
+                                <td>@item.Category</td>
+                                <td>@item.Author</td>
+                                <td>@item.AddedOn</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
@@ -101,27 +85,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>The Silent Observer</td>
-                            <td>Amanpreet Kaur</td>
-                            <td>2026-07-01</td>
-                            <td>2026-07-15</td>
-                            <td><span class="badge badge-status-active">Issued</span></td>
-                        </tr>
-                        <tr>
-                            <td>Introduction to Algorithms</td>
-                            <td>Rohit Sharma</td>
-                            <td>2026-06-28</td>
-                            <td>2026-07-12</td>
-                            <td><span class="badge badge-status-active">Issued</span></td>
-                        </tr>
-                        <tr>
-                            <td>Principles of Database Design</td>
-                            <td>Simran Kaur</td>
-                            <td>2026-06-25</td>
-                            <td>2026-07-09</td>
-                            <td><span class="badge badge-status-inactive">Overdue</span></td>
-                        </tr>
+                        @foreach (var item in Model.RecentlyIssuedBooks)
+                        {
+                            <tr>
+                                <td>@item.BookTitle</td>
+                                <td>@item.Member</td>
+                                <td>@item.IssueDate?.ToString("dd-MM-yyyy")</td>
+                                <td>@item.DueDate?.ToString("dd-MM-yyyy")</td>
+                                <td><span class="badge badge-status-active">Issued</span></td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>

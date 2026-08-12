@@ -23,5 +23,10 @@ namespace Library.UI.Controllers
         {
             return RedirectToAction("Index");
         }
+
+        public IActionResult MemberById()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,13 @@
+﻿@using Library.Application.DTOs
+@model List<BookCategoryDto>
+
+<select class="form-select form-select-sm" style="max-width: 180px;">
+    <option value="">All Categories</option>
+
+    @foreach (var category in Model)
+    {
+        <option value="@category.Id">
+            @category.Name
+        </option>
+    }
+</select>

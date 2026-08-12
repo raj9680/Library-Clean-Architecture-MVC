@@ -33,7 +33,6 @@
     <Folder Include="Data\Sql\StoredProcedures\" />
     <Folder Include="ExternalAPIs\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

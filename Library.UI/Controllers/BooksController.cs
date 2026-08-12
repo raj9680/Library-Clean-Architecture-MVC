@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Library.Application.DTOs;
+using Library.Application.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Library.UI.Controllers
 {
     public class BooksController : Controller
     {
-        public IActionResult Index()
+        private readonly IBookService _bookService;
+        public BooksController(IBookService bookService)
         {
-            return View();
+            _bookService = bookService;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            List<AllBooksDto> allBooks = await _bookService.ListAllBooksDto();
+            return View(allBooks);
         }
 
         public IActionResult AddBook()

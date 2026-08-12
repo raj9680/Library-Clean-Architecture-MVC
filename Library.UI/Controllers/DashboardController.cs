@@ -1,12 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Library.Application.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Library.UI.Controllers
 {
     public class DashboardController : Controller
     {
-        public IActionResult Index()
+        private readonly IDashboardService _dashboardService;
+
+        public DashboardController(IDashboardService dashboardService)
         {
-            return View();
+            _dashboardService = dashboardService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            var dashboard = await _dashboardService.GetDashboardInfoAsync();
+            return View(dashboard);
         }
     }
 }

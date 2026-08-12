@@ -23,6 +23,12 @@ namespace Library.Infrastructure.Data
 
         public DbSet<Country> Countries { get; set; }
         public DbSet<Author> Authors { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<BookTransaction> BookTransactions { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<Member> Members { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,6 +37,7 @@ namespace Library.Infrastructure.Data
             // Configurations
             CountryConfiguration.Configure(modelBuilder);
             AuthorConfiguration.Configure(modelBuilder);
+            BookConfiguration.Configure(modelBuilder);
         }
     }
 }

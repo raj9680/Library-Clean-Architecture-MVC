@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Library.Application.DTOs.AllBooksDto>
+
+<select class="form-select form-select-sm" style="max-width: 180px;">
+    <option value="">All Categories</option>
+    @foreach(var item in Model)
+    {
+        <option value="@item.Category">@item.Category</option>
+    }
+</select>

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "CA10EA9F-409F-49F5-9E7A-8B83AB483E8E",
+    "Title": "Best Practices of Coding",
+    "ISBN": "INS-837E",
+    "CategoryId": "DD3C0E22-4DD7-4DB3-9F8E-C5FA6662CF47",
+    "AuthorId": "3CC7B4E7-DEAC-41EB-BA19-FDC5F6B742D9",
+    "Publisher": "LP & Bros",
+    "TotalCopies": 22,
+    "ShelfNumber": 110,
+    "Description": "This is book contains conepts of coding",
+    "ImageId": "6C208F70-EBF1-41D0-9085-E8100E382A7D"
+  },
+  {
+    "Id": "3B55774A-4D51-42A6-84C5-78CFA0D27078",
+    "Title": "Mastering concepts with C#",
+    "ISBN": "INS-837D",
+    "CategoryId": "DD3C0E22-4DD7-4DB3-9F8E-C5FA6662CF47",
+    "AuthorId": "3CC7B4E7-DEAC-41EB-BA19-FDC5F6B742D9",
+    "Publisher": "C# Rivers",
+    "TotalCopies": 20,
+    "ShelfNumber": 111,
+    "Description": "This is book contains conepts of C#.NET",
+    "ImageId": "6C208F70-EBF1-41D0-9085-E8100E382A7D"
+  },
+  {
+    "Id": "0ADB8E12-38CC-4C1C-B812-E09FA0C776A1",
+    "Title": "Body and Organs Chem",
+    "ISBN": "INS-837H",
+    "CategoryId": "6CF699A5-CB39-4913-8505-7275A0E6FCE8",
+    "AuthorId": "112B8154-7438-4D0A-A7C2-9017E0EB5BC6",
+    "Publisher": "SC Bio",
+    "TotalCopies": 15,
+    "ShelfNumber": 220,
+    "Description": "This is book contains concepts of Science",
+    "ImageId": "6C208F70-EBF1-41D0-9085-E8100E382A7D"
+  },
+  {
+    "Id": "E2484563-6E87-4A7E-A062-5A1F275C972C",
+    "Title": "Discrete Mathematics V2",
+    "ISBN": "INS-837F",
+    "CategoryId": "2567250E-066B-4E83-B1E4-AC836DE9468D",
+    "AuthorId": "CF198037-E514-45F7-92ED-6AFC02845899",
+    "Publisher": "Dicrete Data",
+    "TotalCopies": 7,
+    "ShelfNumber": 90,
+    "Description": "This is book contains conepts of Maths",
+    "ImageId": "6C208F70-EBF1-41D0-9085-E8100E382A7D"
+  }
+]
