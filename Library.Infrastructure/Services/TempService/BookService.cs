@@ -1,5 +1,6 @@
 ﻿using Library.Application.DTOs;
 using Library.Application.Interfaces;
+using Library.Domain.Entities;
 using Library.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,42 +14,55 @@ namespace Library.Infrastructure.Services.TempService
             _dbContext = dbContext;
         }
 
-        public async Task<List<AllBooksDto>> ListAllBooksDto()
+        public async Task<List<AllBooksDto>> ListAllBooksDto( string? searchBy, string? searchByCategory)
         {
-            var allBooks = _dbContext.Books.Include(x => x.Category).Include(x => x.Author).Include(x => x.Image).Include(x => x.BookTransactions).ThenInclude(m => m.Member).ToList();
-            List<AllBooksDto> allBooksDto = new List<AllBooksDto>();
+            IQueryable<Book> query = _dbContext.Books.AsNoTracking();
 
-            foreach (var item in allBooks)
+            if (!string.IsNullOrWhiteSpace(searchBy))
             {
-                AllBooksDto BookDto = new AllBooksDto()
-                {
-                    BookId = item.Id,
-                    Publisher = item.Publisher,
-                    PublishDate = item.PublishDate ?? DateTime.Now,
-                    ShelfNumber = item.ShelfNumber,
-                    TotalCopies = item.TotalCopies,
-                    BookURL = item.Image?.Url?.ToString(),
-                    BookTitle = item.Title,
-                    ISBN = item.ISBN,
-                    Description = item.Description,
-                    Category = item.Category?.Name?.ToString(),
-                    Author = item.Author?.Name?.ToString(),
-                    AvailableCopies = Convert.ToInt32(item.TotalCopies),
-                    AllBooksTransactionsDto = item.BookTransactions?.Select(transaction => new AllBookTransactionDto
-                    {
-                        TransactionId = transaction.Id,
-                        TMemberId = transaction.MemberId,
-                        Member = transaction?.Member?.Name?.ToString(),
-                        IssueDate = transaction.IssueDate,
-                        DueDate = transaction.DueDate,
-                        ReturnDate = transaction.ReturnDate,
-                        CalculatedFine = transaction.CalculatedFine
-                    }).ToList()
-                };
+                searchBy = searchBy.Trim();
 
-                allBooksDto.Add(BookDto);
+                query = query.Where(x =>
+                x.Title.Contains(searchBy) ||
+                x.ISBN.Contains(searchBy) ||
+                x.Author.Name.Contains(searchBy));
             }
-            return allBooksDto;
+
+            if (!string.IsNullOrWhiteSpace(searchByCategory))
+            {
+                query = query.Where(x => x.Category.Name.Contains(searchByCategory));
+            }
+
+            // This is just only mapping to DTOs
+            return await query
+                .Select(x => new AllBooksDto
+                {
+                    BookId = x.Id,
+                    Publisher = x.Publisher,
+                    PublishDate = x.PublishDate ?? DateTime.Now,
+                    ShelfNumber = x.ShelfNumber,
+                    TotalCopies = x.TotalCopies,
+                    BookURL = x.Image != null?x.Image.Url:null,
+                    BookTitle = x.Title,
+                    ISBN = x.ISBN,
+                    Description = x.Description,
+                    Category = x.Category.Name,
+                    Author = x.Author.Name,
+                    AvailableCopies = x.TotalCopies,
+
+                    AllBooksTransactionsDto = x.BookTransactions
+                .Select(transaction => new AllBookTransactionDto
+                {
+                    TransactionId = transaction.Id,
+                    TMemberId = transaction.MemberId,
+                    Member = transaction.Member.Name,
+                    IssueDate = transaction.IssueDate,
+                    DueDate = transaction.DueDate,
+                    ReturnDate = transaction.ReturnDate,
+                    CalculatedFine = transaction.CalculatedFine
+                }).ToList()
+             
+            }).ToListAsync();
         }
     }
 }

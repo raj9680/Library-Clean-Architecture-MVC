@@ -9,13 +9,14 @@
         <a asp-controller="Books" asp-action="AddBook" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg"></i> Add Book</a>
     </div>
 
-    <div class="toolbar">
-        <input type="search" class="form-control form-control-sm" style="max-width: 280px;" placeholder="Search by title, ISBN or author" />
-        @* @await Html.PartialAsync("~/Views/Shared/_CategoryPartialView.cshtml") *@
+    <form class="toolbar" asp-controller="Books" asp-action="Index" method="get">
+        <input name="searchBy" value="@ViewBag.SearchBy" type="search" class="form-control form-control-sm" style="max-width: 280px;" placeholder="Search by title, ISBN or author" />
+
         @await Component.InvokeAsync("CategoryDropdown")
 
-        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-search"></i> Search</button>
-    </div>
+        <button type="submit" class="btn btn-sm btn-outline-secondary"><i class="bi bi-search"></i>Search</button>
+        <a asp-controller="Books" asp-action="Index">Clear Search</a>
+    </form>
 
     <div class="panel">
         <div class="panel-body p-0">
