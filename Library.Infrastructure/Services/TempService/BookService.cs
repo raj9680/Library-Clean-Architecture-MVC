@@ -14,7 +14,7 @@ namespace Library.Infrastructure.Services.TempService
             _dbContext = dbContext;
         }
 
-        public async Task<List<AllBooksDto>> ListAllBooksDto( string? searchBy, string? searchByCategory)
+        public async Task<PaginatedAllBooksDto> ListAllBooksDto(string? searchBy, string? searchByCategory, int page, int pageSize)
         {
             IQueryable<Book> query = _dbContext.Books.AsNoTracking();
 
@@ -33,8 +33,24 @@ namespace Library.Infrastructure.Services.TempService
                 query = query.Where(x => x.Category.Name.Contains(searchByCategory));
             }
 
+            // For Pagination
+
+            // 1 - Count after filtering
+            int totalRecords = query.Count();
+
+            // 2 - Calculate total pages
+            int totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+
+            // 3 - Get only the requested pages
+            query = query
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize);
+
+            // 4 - Execute Query
+            // var books = query.ToList(); - twice
+
             // This is just only mapping to DTOs
-            return await query
+            var books = await query
                 .Select(x => new AllBooksDto
                 {
                     BookId = x.Id,
@@ -42,7 +58,7 @@ namespace Library.Infrastructure.Services.TempService
                     PublishDate = x.PublishDate ?? DateTime.Now,
                     ShelfNumber = x.ShelfNumber,
                     TotalCopies = x.TotalCopies,
-                    BookURL = x.Image != null?x.Image.Url:null,
+                    BookURL = x.Image != null ? x.Image.Url : null,
                     BookTitle = x.Title,
                     ISBN = x.ISBN,
                     Description = x.Description,
@@ -61,8 +77,17 @@ namespace Library.Infrastructure.Services.TempService
                     ReturnDate = transaction.ReturnDate,
                     CalculatedFine = transaction.CalculatedFine
                 }).ToList()
-             
-            }).ToListAsync();
+
+                }).ToListAsync();
+
+            return new PaginatedAllBooksDto
+            {
+                Items = books,
+                TotalRecords = totalRecords,
+                TotalPages = totalPages,
+                CurrentPage = page,
+                PageSize = pageSize
+            };
         }
     }
 }

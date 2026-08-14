@@ -12,14 +12,13 @@ namespace Library.UI.Controllers
             _bookService = bookService;
         }
 
-        public async Task<IActionResult> Index(string? searchBy, string? searchByCategory)
+        public async Task<IActionResult> Index(string? searchBy, string? searchByCategory, int page=1, int pageSize=5)
         {
-            List<AllBooksDto> allBooks = await _bookService.ListAllBooksDto(searchBy, searchByCategory);
+            PaginatedAllBooksDto allBooks = await _bookService.ListAllBooksDto(searchBy, searchByCategory, page, pageSize);
             ViewBag.SearchBy = searchBy;
             ViewBag.SearchByCategory = searchByCategory;
             return View(allBooks);
         }
-
 
         public IActionResult AddBook()
         {
