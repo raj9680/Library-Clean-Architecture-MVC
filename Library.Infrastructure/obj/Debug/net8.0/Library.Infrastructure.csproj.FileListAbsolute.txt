@@ -53,3 +53,5 @@ C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Infrastructu
 C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.pdb
 C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.genruntimeconfig.cache
 C:\Users\raj.kumar\Documents\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\ref\Library.Infrastructure.dll
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\bin\Debug\net8.0\Library.Infrastructure.runtimeconfig.json
+C:\Users\aryan\OneDrive\Desktop\Library-Clean-Architecture-MVC\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.genruntimeconfig.cache

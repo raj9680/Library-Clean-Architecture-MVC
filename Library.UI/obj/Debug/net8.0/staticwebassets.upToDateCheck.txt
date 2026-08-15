@@ -1,0 +1,4 @@
+wwwroot\css\style.css
+wwwroot\img\book_cover.jpg
+wwwroot\img\profile.png
+wwwroot\js\app.js
