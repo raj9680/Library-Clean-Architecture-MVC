@@ -14,7 +14,8 @@ namespace Library.Infrastructure.Services.TempService
             _dbContext = dbContext;
         }
 
-        public async Task<PaginatedAllBooksDto> ListAllBooksDto(string? searchBy, string? searchByCategory, int page, int pageSize)
+        
+        public async Task<PaginatedAllBooksDto> ListAllBooksAsync(string? searchBy, string? searchByCategory, int page, int pageSize)
         {
             IQueryable<Book> query = _dbContext.Books.AsNoTracking();
 
@@ -30,7 +31,7 @@ namespace Library.Infrastructure.Services.TempService
 
             if (!string.IsNullOrWhiteSpace(searchByCategory))
             {
-                query = query.Where(x => x.Category.Name.Contains(searchByCategory));
+                query = query.Where(x => x.Category.Id.ToString() == searchByCategory);
             }
 
             // For Pagination
@@ -46,8 +47,7 @@ namespace Library.Infrastructure.Services.TempService
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize);
 
-            // 4 - Execute Query
-            // var books = query.ToList(); - twice
+            // 4 - Execute Query - var books = query.ToList(); - twice
 
             // This is just only mapping to DTOs
             var books = await query
@@ -65,7 +65,6 @@ namespace Library.Infrastructure.Services.TempService
                     Category = x.Category.Name,
                     Author = x.Author.Name,
                     AvailableCopies = x.TotalCopies,
-
                     AllBooksTransactionsDto = x.BookTransactions
                 .Select(transaction => new AllBookTransactionDto
                 {
@@ -88,6 +87,50 @@ namespace Library.Infrastructure.Services.TempService
                 CurrentPage = page,
                 PageSize = pageSize
             };
+        }
+
+        public async Task<AddBookDto> AddBookAsync(AddBookDto addBookDto)
+        {
+            await using(var transaction = await _dbContext.Database.BeginTransactionAsync())
+            {
+                try
+                {
+                    // T1 - insert image
+                    Image img = new Image
+                    {
+                        Id = Guid.NewGuid(),
+                        Url = $"/img/{addBookDto.ImageFileName}"
+                    };
+
+                    _dbContext.Images.Add(img);
+                    await _dbContext.SaveChangesAsync();
+
+                    // T2 - save book
+                    Book book = addBookDto.ToBook();
+
+                    book.ImageId = img.Id;
+                    _dbContext.Books.Add(book);
+
+                    var updatedRecords = await _dbContext.SaveChangesAsync();
+
+                    if (updatedRecords == 0)
+                    {
+                        throw new InvalidOperationException("Book was not inserted.");
+                    }
+
+                    await transaction.CommitAsync();
+
+                    return new AddBookDto
+                    {
+                        Id = book.Id
+                    };
+                }
+                catch
+                {
+                    await transaction.RollbackAsync();
+                    throw;
+                }
+            }
         }
     }
 }

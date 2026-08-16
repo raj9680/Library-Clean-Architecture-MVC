@@ -12,7 +12,9 @@
     <form class="toolbar" asp-controller="Books" asp-action="Index" method="get">
         <input name="searchBy" value="@ViewBag.SearchBy" type="search" class="form-control form-control-sm" style="max-width: 280px;" placeholder="Search by title, ISBN or author" />
 
-        @await Component.InvokeAsync("CategoryDropdown")
+        <select name="searchByCategory" class="form-select form-select-sm" style="max-width: 180px;">
+            @await Component.InvokeAsync("CategoryDropdown")
+        </select>
 
         <button type="submit" class="btn btn-sm btn-outline-secondary"><i class="bi bi-search" style="margin-right:6px;"></i>Search</button>
         <a asp-controller="Books" asp-action="Index">Clear Search</a>
@@ -152,7 +154,7 @@
                             <dt class="col-sm-4">Publisher</dt>
                                 <dd class="col-sm-8">@item?.Publisher</dd>
                             <dt class="col-sm-4">Publish Date</dt>
-                                <dd class="col-sm-8">@item?.PublishDate</dd>
+                                <dd class="col-sm-8">@item?.PublishDate?.ToString("dd-MM-yyyy")</dd>
                             <dt class="col-sm-4">Total Copies</dt>
                                 <dd class="col-sm-8">@item?.TotalCopies</dd>
                             <dt class="col-sm-4">Available Copies</dt>

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model AddBookDto
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <main class="main-content" id="mainContent">
@@ -8,74 +9,92 @@
 
     <div class="panel">
         <div class="panel-body">
-            <form>
+            <form asp-controller="Books" asp-action="AddBook" method="post" enctype="multipart/form-data">
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <label class="form-label">Title</label>
-                        <input type="text" class="form-control" placeholder="e.g. The Silent Observer" />
+                        <label class="form-label" asp-for="@Model.Title">Title</label>
+                        <input asp-for="@Model.Title" class="form-control" placeholder="e.g. The Silent Observer" />
+                        <span asp-validation-for="@Model.Title"></span>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">ISBN</label>
-                        <input type="text" class="form-control" placeholder="e.g. 978-0-123456-01-1" />
+                        <label asp-for="@Model.ISBN" class="form-label">ISBN</label>
+                        <input asp-for="@Model.ISBN" class="form-control" placeholder="e.g. 978-0-123456-01-1" />
+                        <span asp-validation-for="@Model.ISBN"></span>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Category</label>
-                        <select class="form-select">
-                            <option value="">Select Category</option>
-                            <option>Fiction</option>
-                            <option>Computer Science</option>
-                            <option>History</option>
+                        <label asp-for="@Model.CategoryId" class="form-label">Category</label>
+                        <select asp-for="@Model.CategoryId" class="form-select">
+                        @await Component.InvokeAsync("CategoryDropdown")
                         </select>
+                        <span asp-validation-for="@Model.CategoryId"></span>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Author</label>
-                        <select class="form-select">
-                            <option value="">Select Author</option>
-                            <option>J. Harmon</option>
-                            <option>R. Nair</option>
-                            <option>S. Gill</option>
+                        <label asp-for="@Model.AuthorId" class="form-label">Author</label>
+                        <select asp-for="@Model.AuthorId" class="form-select">
+                            @await Component.InvokeAsync("AuthorDropdown")
                         </select>
+                        <span asp-validation-for="@Model.AuthorId"></span>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Publisher</label>
-                        <input type="text" class="form-control" placeholder="e.g. Northfield Press" />
+                        <label asp-for="@Model.Publisher" class="form-label">Publisher</label>
+                        <input asp-for="@Model.Publisher" class="form-control" placeholder="e.g. Northfield Press" />
+                        <span asp-validation-for="@Model.Publisher"></span>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Publish Date</label>
-                        <input type="date" class="form-control" />
+                        <label asp-for="@Model.PublishDate" class="form-label">Publish Date</label>
+                        <input asp-for="@Model.PublishDate" type="date" class="form-control" />
+                        <span asp-validation-for="@Model.PublishDate"></span>
                     </div>
 
                     <div class="col-md-4">
-                        <label class="form-label">Total Copies</label>
-                        <input type="number" class="form-control" min="0" placeholder="0" />
+                        <label asp-for="@Model.TotalCopies" class="form-label">Total Copies</label>
+                        <input asp-for="@Model.TotalCopies" class="form-control" min="0" placeholder="0" />
+                        <span asp-validation-for="@Model.TotalCopies"></span>
                     </div>
                     <div class="col-md-4">
-                        <label class="form-label">Available Copies</label>
-                        <input type="number" class="form-control" min="0" placeholder="0" />
+                        <label asp-for="@Model.AvailableCopies" class="form-label">Available Copies</label>
+                        <input asp-for="@Model.AvailableCopies" class="form-control" min="0" placeholder="0" />
+                        <span asp-validation-for="@Model.AvailableCopies"></span>
                     </div>
                     <div class="col-md-4">
-                        <label class="form-label">Shelf Number</label>
-                        <input type="text" class="form-control" placeholder="e.g. A-12" />
+                        <label asp-for="@Model.ShelfNumber" class="form-label">Shelf Number</label>
+                        <input asp-for="@Model.ShelfNumber" class="form-control" placeholder="e.g. A-12" />
+                        <span asp-validation-for="@Model.ShelfNumber"></span>
                     </div>
 
                     <div class="col-12">
-                        <label class="form-label">Description</label>
-                        <textarea class="form-control" rows="4" placeholder="Short description of the book..."></textarea>
+                        <label asp-for="@Model.Description" class="form-label">Description</label>
+                        <textarea asp-for="@Model.Description" class="form-control" rows="4" placeholder="Short description of the book..."></textarea>
+                        <span asp-validation-for="@Model.Description"></span>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Cover Image</label>
-                        <input type="file" class="form-control" accept="image/*" />
+                        <label asp-for="Image" class="form-label">Cover Image</label>
+
+                        <input asp-for="Image"
+                               type="file"
+                               class="form-control"
+                               accept="image/*" />
+
+                        <span asp-validation-for="Image" class="text-danger"></span>
                     </div>
                 </div>
 
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Save</button>
-                    <a href="books.html" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
+                    <a href="" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
                 </div>
             </form>
         </div>
     </div>
 </main>
+@section scripts
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" asp-fallback-test="window.jQuery" asp-fallback-src="~/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" asp-fallback-test="window.jQuery" asp-fallback-src="~/jquery.validate.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" asp-fallback-test="window.jQuery.validator.unobtrusive" asp-fallback-src="~/jquery.validate.unobtrusive.min.js"></script>
+}

@@ -4,6 +4,7 @@ namespace Library.Application.Interfaces
 {
     public interface IBookService
     {
-        Task<PaginatedAllBooksDto> ListAllBooksDto(string? searchBy, string? searchByCategory, int page, int pageSize);
+        Task<PaginatedAllBooksDto> ListAllBooksAsync(string? searchBy, string? searchByCategory, int page, int pageSize);
+        Task<AddBookDto> AddBookAsync(AddBookDto addBookDto);
     }
 }

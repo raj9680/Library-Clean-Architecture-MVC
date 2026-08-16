@@ -5,6 +5,6 @@ namespace Library.Application.Interfaces
 {
     public interface ICategoryService
     {
-        Task<List<BookCategoryDto>> GetAllCategoryAsync();
+        Task<List<CategoryDto>> GetAllCategoryAsync();
     }
 }

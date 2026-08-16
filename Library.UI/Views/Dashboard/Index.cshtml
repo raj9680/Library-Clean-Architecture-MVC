@@ -60,7 +60,7 @@
                                 <td>@item.ISBN</td>
                                 <td>@item.Category</td>
                                 <td>@item.Author</td>
-                                <td>@item.AddedOn</td>
+                                <td>@item.AddedOn?.ToString("dd-MM-yyyy")</td>
                             </tr>
                         }
                     </tbody>
