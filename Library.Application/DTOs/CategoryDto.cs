@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace Library.Application.DTOs
 {
-    public class BookCategoryDto
+    public class CategoryDto
     {
         public Guid? Id { get; set; }
         public string? Name { get; set; }
@@ -13,9 +13,9 @@ namespace Library.Application.DTOs
     // Extension method to Map Category to CategoryDto
     public static class BookCategoryExtensions
     {
-        public static BookCategoryDto ToCategory(this Category category)
+        public static CategoryDto ToCategory(this Category category)
         {
-            return new BookCategoryDto
+            return new CategoryDto
             {
                 Id = category.Id,
                 Name = category.Name

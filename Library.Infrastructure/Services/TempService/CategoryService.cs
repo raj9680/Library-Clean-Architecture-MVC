@@ -13,7 +13,7 @@ namespace Library.Infrastructure.Services.TempService
             _dbContext = dbContext;
         }
 
-        public async Task<List<BookCategoryDto>> GetAllCategoryAsync()
+        public async Task<List<CategoryDto>> GetAllCategoryAsync()
         {
             //
             //List<Category> allCategory = await _dbContext.Categories.ToListAsync();
@@ -31,7 +31,7 @@ namespace Library.Infrastructure.Services.TempService
             //}
 
             // OR
-            List<BookCategoryDto> result = await _dbContext.Categories.Select(category => category.ToCategory()).ToListAsync();
+            List<CategoryDto> result = await _dbContext.Categories.Select(category => category.ToCategory()).ToListAsync();
 
             return result;
         }

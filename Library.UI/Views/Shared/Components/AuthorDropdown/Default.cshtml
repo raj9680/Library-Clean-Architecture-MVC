@@ -1,0 +1,8 @@
+﻿@using Library.Application.DTOs
+@model List<AuthorDto>
+
+<option value="">Select Author</option>
+@foreach (var item in Model)
+{
+    <option value="@item.Id">@item.Name</option>
+}

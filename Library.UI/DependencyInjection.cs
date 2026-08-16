@@ -16,9 +16,6 @@ namespace Library.UI
 
             services.AddApplicationDI()
                 .AddInfrastructureDI(connectionString);
-            services.AddScoped<IDashboardService, DashboardService>();
-            services.AddScoped<IBookService, BookService>();
-            services.AddScoped<ICategoryService, CategoryService>();
             return services;
         }
     }
