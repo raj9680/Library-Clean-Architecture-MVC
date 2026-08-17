@@ -1,6 +1,5 @@
 ﻿
 using Library.Domain.Entities;
-using System.Runtime.CompilerServices;
 
 namespace Library.Application.DTOs
 {

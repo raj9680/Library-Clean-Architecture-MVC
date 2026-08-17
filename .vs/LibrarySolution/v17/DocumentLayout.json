@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFD812A-6C4F-4390-A769-C223CDFB00E0}|Library.UI\\Library.UI.csproj|c:\\users\\raj.kumar\\documents\\library-clean-architecture-mvc\\library.ui\\views\\books\\editbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BFD812A-6C4F-4390-A769-C223CDFB00E0}|Library.UI\\Library.UI.csproj|solutionrelative:library.ui\\views\\books\\editbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C560DD7-7749-418A-BDA1-8E035C571F2C}|Library.Infrastructure\\Library.Infrastructure.csproj|c:\\users\\raj.kumar\\documents\\library-clean-architecture-mvc\\library.infrastructure\\services\\tempservice\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C560DD7-7749-418A-BDA1-8E035C571F2C}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\services\\tempservice\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E84564B6-5D06-4ECA-83A2-0F314B4CA7E8}|Library.Application\\Library.Application.csproj|c:\\users\\raj.kumar\\documents\\library-clean-architecture-mvc\\library.application\\dtos\\editbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E84564B6-5D06-4ECA-83A2-0F314B4CA7E8}|Library.Application\\Library.Application.csproj|solutionrelative:library.application\\dtos\\editbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E84564B6-5D06-4ECA-83A2-0F314B4CA7E8}|Library.Application\\Library.Application.csproj|c:\\users\\raj.kumar\\documents\\library-clean-architecture-mvc\\library.application\\dtos\\allbooksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E84564B6-5D06-4ECA-83A2-0F314B4CA7E8}|Library.Application\\Library.Application.csproj|solutionrelative:library.application\\dtos\\allbooksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0BEFFD6-16F7-47B8-BC15-72FE9C9C7CCA}|Library.Domain\\Library.Domain.csproj|c:\\users\\raj.kumar\\documents\\library-clean-architecture-mvc\\library.domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0BEFFD6-16F7-47B8-BC15-72FE9C9C7CCA}|Library.Domain\\Library.Domain.csproj|solutionrelative:library.domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFD812A-6C4F-4390-A769-C223CDFB00E0}|Library.UI\\Library.UI.csproj|c:\\users\\raj.kumar\\documents\\library-clean-architecture-mvc\\library.ui\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFD812A-6C4F-4390-A769-C223CDFB00E0}|Library.UI\\Library.UI.csproj|solutionrelative:library.ui\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E84564B6-5D06-4ECA-83A2-0F314B4CA7E8}|Library.Application\\Library.Application.csproj|c:\\users\\raj.kumar\\documents\\library-clean-architecture-mvc\\library.application\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E84564B6-5D06-4ECA-83A2-0F314B4CA7E8}|Library.Application\\Library.Application.csproj|solutionrelative:library.application\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFD812A-6C4F-4390-A769-C223CDFB00E0}|Library.UI\\Library.UI.csproj|c:\\users\\raj.kumar\\documents\\library-clean-architecture-mvc\\library.ui\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BFD812A-6C4F-4390-A769-C223CDFB00E0}|Library.UI\\Library.UI.csproj|solutionrelative:library.ui\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +42,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditBook.cshtml",
+              "DocumentMoniker": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\Views\\Books\\EditBook.cshtml",
+              "RelativeDocumentMoniker": "Library.UI\\Views\\Books\\EditBook.cshtml",
+              "ToolTip": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\Views\\Books\\EditBook.cshtml",
+              "RelativeToolTip": "Library.UI\\Views\\Books\\EditBook.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-17T13:03:30.737Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -18,6 +65,97 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Domain\\Entities\\Book.cs",
+              "RelativeDocumentMoniker": "Library.Domain\\Entities\\Book.cs",
+              "ToolTip": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Domain\\Entities\\Book.cs",
+              "RelativeToolTip": "Library.Domain\\Entities\\Book.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAUwAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T13:07:44.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AllBooksDto.cs",
+              "DocumentMoniker": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Application\\DTOs\\AllBooksDto.cs",
+              "RelativeDocumentMoniker": "Library.Application\\DTOs\\AllBooksDto.cs",
+              "ToolTip": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Application\\DTOs\\AllBooksDto.cs",
+              "RelativeToolTip": "Library.Application\\DTOs\\AllBooksDto.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA4wAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:55:52.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Infrastructure\\Services\\TempService\\BookService.cs",
+              "RelativeDocumentMoniker": "Library.Infrastructure\\Services\\TempService\\BookService.cs",
+              "ToolTip": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Infrastructure\\Services\\TempService\\BookService.cs",
+              "RelativeToolTip": "Library.Infrastructure\\Services\\TempService\\BookService.cs",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAuwIgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:30:08.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EditBookDto.cs",
+              "DocumentMoniker": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Application\\DTOs\\EditBookDto.cs",
+              "RelativeDocumentMoniker": "Library.Application\\DTOs\\EditBookDto.cs",
+              "ToolTip": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Application\\DTOs\\EditBookDto.cs",
+              "RelativeToolTip": "Library.Application\\DTOs\\EditBookDto.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAAwDIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:20:44.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Application\\Interfaces\\IBookService.cs",
+              "RelativeDocumentMoniker": "Library.Application\\Interfaces\\IBookService.cs",
+              "ToolTip": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Application\\Interfaces\\IBookService.cs",
+              "RelativeToolTip": "Library.Application\\Interfaces\\IBookService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:19:11.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "Library.UI\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "Library.UI\\Controllers\\BooksController.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAFoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T08:51:53.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\Views\\Books\\Index.cshtml",
+              "RelativeDocumentMoniker": "Library.UI\\Views\\Books\\Index.cshtml",
+              "ToolTip": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\Views\\Books\\Index.cshtml",
+              "RelativeToolTip": "Library.UI\\Views\\Books\\Index.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADAAAACiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-17T08:34:08.022Z",
+              "EditorCaption": ""
             }
           ]
         }

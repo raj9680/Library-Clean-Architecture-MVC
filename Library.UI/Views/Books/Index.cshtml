@@ -46,8 +46,8 @@
                                 <td>@item?.Author</td>
                                 <td>@item?.AvailableCopies</td>
                                 <td class="action-icons">
-                                    <a href="#" title="View" data-bs-toggle="modal" data-bs-target="#@item?.BookId"><i class="bi bi-eye"></i></a>
-                                    <a asp-controller="Books" asp-action="EditBook" title="Edit"><i class="bi bi-pencil"></i></a>
+                                    <a href="javascript:void(0)" title="View" data-bs-toggle="modal" data-bs-target="#@item?.BookId"><i class="bi bi-eye"></i></a>
+                                    <a asp-controller="Books" asp-action="EditBook" asp-route-id="@item?.BookId" title="Edit"><i class="bi bi-pencil"></i></a>
                                     <a asp-controller="Books" asp-action="DeleteBook" class="btn-delete text-danger" data-name="The Silent Observer" title="Delete"><i class="bi bi-trash"></i></a>
                                 </td>
                             </tr>

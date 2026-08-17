@@ -132,5 +132,17 @@ namespace Library.Infrastructure.Services.TempService
                 }
             }
         }
+
+        public async Task<EditBookDto> EditBookAsync(Guid id)
+        {
+            EditBookDto? editBookDto = await _dbContext.Books.AsNoTracking().Where(i => i.Id == id).Select(x => x.ToBook()).FirstOrDefaultAsync();
+
+            if (editBookDto == null)
+            {
+                throw new KeyNotFoundException("Book not found.");
+            }
+
+            return editBookDto;
+        }
     }
 }

@@ -83,10 +83,11 @@ namespace Library.UI.Controllers
             return RedirectToAction("Index");
         }
 
-
-        public IActionResult EditBook()
+        [HttpGet]
+        public async Task<IActionResult> EditBook(Guid id)
         {
-            return View();
+            EditBookDto editBookDto = await _bookService.EditBookAsync(id);
+            return View(editBookDto);
         }
 
         public IActionResult IssueBook()

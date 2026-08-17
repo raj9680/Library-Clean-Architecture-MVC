@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\32f8fb33-cf1c-47e9-b729-58edc091a3d3.jpeg",
+      "PackagePath": "staticwebassets\\img\\32f8fb33-cf1c-47e9-b729-58edc091a3d3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\b512b7bf-1f52-42a8-92eb-c4c93716f1b5.jpeg",
+      "PackagePath": "staticwebassets\\img\\b512b7bf-1f52-42a8-92eb-c4c93716f1b5.jpeg"
+    },
+    {
       "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\book_cover.jpg",
       "PackagePath": "staticwebassets\\img\\book_cover.jpg"
+    },
+    {
+      "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\f5dcb0df-ef21-421c-ba86-7acc8662ea9e.jpg",
+      "PackagePath": "staticwebassets\\img\\f5dcb0df-ef21-421c-ba86-7acc8662ea9e.jpg"
     },
     {
       "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\profile.png",
