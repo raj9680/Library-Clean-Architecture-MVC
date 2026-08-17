@@ -14,10 +14,13 @@
                     <div class="col-md-6">
                         <label asp-for="Title" class="form-label">Title</label>
                         <input asp-for="Title" value="@Model.Title" class="form-control" placeholder="e.g. The Silent Observer" />
+                        <input hidden="hidden" value="@Model.Id" />
+                        <span asp-validation-for="Title"></span>
                     </div>
                     <div class="col-md-6">
                         <label asp-for="ISBN" class="form-label">ISBN</label>
-                        <input type="text" class="form-control" placeholder="e.g. 978-0-123456-01-1" value="@Model.ISBN" />
+                        <input asp-for="ISBN" type="text" class="form-control" placeholder="e.g. 978-0-123456-01-1" value="@Model.ISBN" />
+                        <span asp-validation-for="ISBN"></span>
                     </div>
 
                     <div class="col-md-6">
@@ -25,45 +28,66 @@
                         <select asp-for="CategoryId" class="form-select">
                             @await Component.InvokeAsync("CategoryDropdown")
                         </select>
+                        <span asp-validation-for="CategoryId"></span>
                     </div>
                     <div class="col-md-6">
                         <label asp-for="AuthorId" class="form-label">Author</label>
                         <select asp-for="AuthorId" class="form-select">
                             @await Component.InvokeAsync("AuthorDropdown")
                         </select>
+                        <span asp-validation-for="AuthorId"></span>
                     </div>
 
                     <div class="col-md-6">
                         <label asp-for="Publisher" class="form-label">Publisher</label>
                         <input asp-for="Publisher" value="@Model.Publisher" class="form-control" placeholder="e.g. Northfield Press" />
+                        <span asp-validation-for="Publisher"></span>
                     </div>
                     <div class="col-md-6">
                         <label asp-for="PublishDate" class="form-label">Publish Date</label>
                         <input asp-for="PublishDate" type="date" class="form-control" />
+                        <span asp-validation-for="PublishDate"></span>
                     </div>
 
                     <div class="col-md-4">
                         <label asp-for="TotalCopies" class="form-label">Total Copies</label>
                         <input asp-for="TotalCopies" value="@Model.TotalCopies" class="form-control" min="0" placeholder="0" />
+                        <span asp-validation-for="TotalCopies"></span>
                     </div>
                     <div class="col-md-4">
                         <label asp-for="AvailableCopies" class="form-label">Available Copies</label>
                         <input asp-for="AvailableCopies" value="@Model.AvailableCopies" class="form-control" min="0" placeholder="0" />
+                        <span asp-validation-for="AvailableCopies"></span>
                     </div>
                     <div class="col-md-4">
                         <label asp-for="ShelfNumber" class="form-label">Shelf Number</label>
                         <input asp-for="ShelfNumber" value="@Model.ShelfNumber" class="form-control" placeholder="e.g. A-12" />
+                        <span asp-validation-for="ShelfNumber"></span>
                     </div>
 
                     <div class="col-12">
                         <label asp-for="Description" class="form-label">Description</label>
                         <textarea asp-for="Description" value
                         ="@Model.Description" class="form-control" rows="4" placeholder="Short description of the book..."></textarea>
+                        <span asp-validation-for="Description"></span>
                     </div>
 
                     <div class="col-md-6">
-                        <label asp-for="ImageFileName" class="form-label">Cover Image</label>
-                        <input asp-for="ImageFileName" value="@Model.ImageFileName" type="file" class="form-control" accept="image/*" />
+                        <label class="form-label">Cover Image</label>
+
+                        <div class="position-relative">
+                            <img src="@Model.ImageFileName"
+                                 alt="Book Cover"
+                                 class="img-thumbnail"
+                                 style="width: 150px; height: 200px; object-fit: cover;" />
+                        </div>
+
+                        <input asp-for="ImageFileName"
+                               type="file"
+                               class="form-control mt-2"
+                               accept="image/*"
+                               id="imageInput" />
+                        <span asp-validation-for="ImageFileName"></span>
                     </div>
                 </div>
 

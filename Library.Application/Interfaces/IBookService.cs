@@ -6,6 +6,7 @@ namespace Library.Application.Interfaces
     {
         Task<PaginatedAllBooksDto> ListAllBooksAsync(string? searchBy, string? searchByCategory, int page, int pageSize);
         Task<AddBookDto> AddBookAsync(AddBookDto addBookDto);
-        Task<EditBookDto> EditBookAsync(Guid id);
+        Task<EditBookDto> GetBookByIdAsync(Guid id);
+        Task<int> EditBookAsync(EditBookDto editBook);
     }
 }

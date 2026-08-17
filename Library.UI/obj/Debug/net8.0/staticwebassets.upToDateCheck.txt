@@ -2,5 +2,6 @@ wwwroot\css\style.css
 wwwroot\img\32f8fb33-cf1c-47e9-b729-58edc091a3d3.jpeg
 wwwroot\img\b512b7bf-1f52-42a8-92eb-c4c93716f1b5.jpeg
 wwwroot\img\book_cover.jpg
+wwwroot\img\f5dcb0df-ef21-421c-ba86-7acc8662ea9e.jpg
 wwwroot\img\profile.png
 wwwroot\js\app.js

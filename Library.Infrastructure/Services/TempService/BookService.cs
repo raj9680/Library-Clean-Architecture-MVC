@@ -133,16 +133,39 @@ namespace Library.Infrastructure.Services.TempService
             }
         }
 
-        public async Task<EditBookDto> EditBookAsync(Guid id)
+        public async Task<EditBookDto> GetBookByIdAsync(Guid id)
         {
-            EditBookDto? editBookDto = await _dbContext.Books.AsNoTracking().Where(i => i.Id == id).Select(x => x.ToBook()).FirstOrDefaultAsync();
+            EditBookDto? editBookDto = await _dbContext.Books.Include(i=>i.Image).AsNoTracking().Where(i => i.Id == id).Select(x => x.ToBook()).FirstOrDefaultAsync();
 
             if (editBookDto == null)
             {
                 throw new KeyNotFoundException("Book not found.");
             }
-
             return editBookDto;
+        }
+
+        public async Task<int> EditBookAsync(EditBookDto editBook)
+        {
+            Book? book = await _dbContext.Books.FirstOrDefaultAsync(x => x.Id == editBook.Id);
+
+            if(book == null)
+            {
+                throw new KeyNotFoundException("Book not exist");
+            }
+
+            // update Entity
+            book.Title = editBook.Title;
+            book.ISBN = editBook.ISBN;
+            book.CategoryId = editBook.CategoryId;
+            book.AuthorId = editBook.AuthorId;
+            book.Publisher = editBook.Publisher;
+            book.PublishDate = editBook.PublishDate;
+            book.TotalCopies = editBook.TotalCopies;
+            book.AvailableCopies = editBook.AvailableCopies;
+            book.ShelfNumber = editBook.ShelfNumber;
+            book.Description = editBook.Description;
+
+            return await _dbContext.SaveChangesAsync();
         }
     }
 }

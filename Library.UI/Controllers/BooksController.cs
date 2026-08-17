@@ -86,8 +86,32 @@ namespace Library.UI.Controllers
         [HttpGet]
         public async Task<IActionResult> EditBook(Guid id)
         {
-            EditBookDto editBookDto = await _bookService.EditBookAsync(id);
+            EditBookDto editBookDto = await _bookService.GetBookByIdAsync(id);
+            ViewBag.SearchByCategory = editBookDto.CategoryId.ToString();
+            ViewBag.Author = editBookDto.AuthorId.ToString();
             return View(editBookDto);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> EditBook(EditBookDto editBook)
+        {
+            if (!ModelState.IsValid)
+            {
+                if(editBook.CategoryId.ToString() != null)ViewBag.SearchByCategory = editBook.CategoryId.ToString();
+
+                if(editBook.AuthorId.ToString() != null)
+                    ViewBag.Author = editBook.AuthorId.ToString();
+
+                ViewBag.Errors = ModelState.Values.SelectMany(x => x.Errors).Select(i => i.ErrorMessage).ToList();
+                return View(editBook);
+            }
+
+            int updatedRows = await _bookService.EditBookAsync(editBook);
+            if(updatedRows == 0)
+                throw new NullReferenceException("Not updated");
+
+            return RedirectToAction("Index");
         }
 
         public IActionResult IssueBook()

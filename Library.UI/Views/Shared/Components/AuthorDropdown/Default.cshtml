@@ -4,5 +4,13 @@
 <option value="">Select Author</option>
 @foreach (var item in Model)
 {
-    <option value="@item.Id">@item.Name</option>
+    if(item.Id.ToString() == ViewBag.Author)
+    {
+        <option selected="selected" value="@item.Id">@item.Name</option>
+    }
+    else
+    {
+        <option value="@item.Id">@item.Name</option>
+    }
+
 }
