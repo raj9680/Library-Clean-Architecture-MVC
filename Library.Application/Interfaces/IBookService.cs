@@ -8,5 +8,6 @@ namespace Library.Application.Interfaces
         Task<AddBookDto> AddBookAsync(AddBookDto addBookDto);
         Task<EditBookDto> GetBookByIdAsync(Guid id);
         Task<int> EditBookAsync(EditBookDto editBook);
+        Task<int> DeleteBookAsync(Guid Id);
     }
 }

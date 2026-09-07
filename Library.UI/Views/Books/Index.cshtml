@@ -19,6 +19,52 @@
         <button type="submit" class="btn btn-sm btn-outline-secondary"><i class="bi bi-search" style="margin-right:6px;"></i>Search</button>
         <a asp-controller="Books" asp-action="Index">Clear Search</a>
     </form>
+    @* ================= DELETE RESULT MESSAGE ================= *@
+
+    @if (TempData["DeletedResult"] != null)
+    {
+        int deletedResult = Convert.ToInt32(TempData["DeletedResult"]);
+
+        if (deletedResult == 457)
+        {
+            <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+                <strong>Unable to delete Book.</strong>
+                This book cannot be deleted because it is issued to one or more member.
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close">
+                </button>
+            </div>
+        }
+        else if (deletedResult == 1)
+        {
+            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                <strong>Book deleted successfully.</strong>
+                The book has been removed successfully.
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close">
+                </button>
+            </div>
+        }
+        else if (deletedResult == 0)
+        {
+            <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                <strong>Something went wrong.</strong>
+                The book could not be deleted. Please try again.
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close">
+                </button>
+            </div>
+        }
+    }
 
     <div class="panel">
         <div class="panel-body p-0">
@@ -48,7 +94,7 @@
                                 <td class="action-icons">
                                     <a href="javascript:void(0)" title="View" data-bs-toggle="modal" data-bs-target="#@item?.BookId"><i class="bi bi-eye"></i></a>
                                     <a asp-controller="Books" asp-action="EditBook" asp-route-id="@item?.BookId" title="Edit"><i class="bi bi-pencil"></i></a>
-                                    <a asp-controller="Books" asp-action="DeleteBook" class="btn-delete text-danger" data-name="The Silent Observer" title="Delete"><i class="bi bi-trash"></i></a>
+                                    <a asp-controller="Books" asp-action="DeleteBook" asp-route-bookId="@item.BookId" class="btn-delete text-danger"><i class="bi bi-trash"></i></a>
                                 </td>
                             </tr>
                         }

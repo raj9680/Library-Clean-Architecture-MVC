@@ -167,5 +167,30 @@ namespace Library.Infrastructure.Services.TempService
 
             return await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<int> DeleteBookAsync(Guid bookId)
+        {
+            var book = await _dbContext.Books.FirstOrDefaultAsync(x => x.Id == bookId);
+
+            if(book == null)
+            {
+                return 0;
+            }
+
+            int result = 0;
+            var res = _dbContext.Books.Remove(book);
+            try
+            {
+                result = await _dbContext.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException.Message.Contains("FK_BookTransactions_Books_BookId"))
+                {
+                    result = 457;
+                }
+            }
+            return result;
+        }
     }
 }

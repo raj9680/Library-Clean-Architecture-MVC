@@ -1,7 +1,12 @@
 wwwroot\css\style.css
 wwwroot\img\32f8fb33-cf1c-47e9-b729-58edc091a3d3.jpeg
+wwwroot\img\596c1758-b69e-4a13-838f-48a7b9e5e3db.jpg
+wwwroot\img\83df9c8e-1169-43a5-ac5e-7a4a74ffee4f.webp
+wwwroot\img\9f8bd958-6eaa-442b-851c-14a20778f1bb.png
 wwwroot\img\b512b7bf-1f52-42a8-92eb-c4c93716f1b5.jpeg
 wwwroot\img\book_cover.jpg
+wwwroot\img\ce5cc3b4-6d8f-4023-b6a1-2483e84160ea.jpg
 wwwroot\img\f5dcb0df-ef21-421c-ba86-7acc8662ea9e.jpg
 wwwroot\img\profile.png
+wwwroot\img\writer-clipart-xl.png
 wwwroot\js\app.js

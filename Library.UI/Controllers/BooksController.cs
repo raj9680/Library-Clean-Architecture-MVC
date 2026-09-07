@@ -15,11 +15,12 @@ namespace Library.UI.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public async Task<IActionResult> Index(string? searchBy, string? searchByCategory, int page=1, int pageSize=4)
+        public async Task<IActionResult> Index(string? searchBy, string? searchByCategory, int page=1, int pageSize=4, int result = 10)
         {
             PaginatedAllBooksDto allBooks = await _bookService.ListAllBooksAsync(searchBy, searchByCategory, page, pageSize);
             ViewBag.SearchBy = searchBy;
             ViewBag.SearchByCategory = searchByCategory;
+            TempData["DeletedResult"] = result;
             return View(allBooks);
         }
 
@@ -124,9 +125,15 @@ namespace Library.UI.Controllers
             return View();
         }
 
-        public IActionResult DeleteBook()
+        public async Task<IActionResult> DeleteBook(Guid bookId)
         {
-            return RedirectToAction("Index");
+            int result = 0;
+            if (bookId == Guid.Empty)
+                return RedirectToAction("Index", new {result = result });
+
+            result = await _bookService.DeleteBookAsync(bookId);
+
+            return RedirectToAction("Index", new {result = result });
         }
     }
 }
