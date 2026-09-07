@@ -1,0 +1,15 @@
+﻿@model List<CountryDto>
+
+<option value="">Select Country</option>
+@foreach (var country in Model)
+{
+    if (country.Id == ViewBag.Country)
+    {
+        <option selected="selected" value="@country.Id">@country.Name</option>
+    }
+    else
+    {
+        <option value="@country.Id">@country.Name</option>
+    }
+
+}

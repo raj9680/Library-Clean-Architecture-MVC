@@ -1,4 +1,5 @@
-﻿@{
+﻿@model AuthorDto
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <main class="main-content" id="mainContent">
@@ -8,19 +9,24 @@
 
     <div class="panel">
         <div class="panel-body">
-            <form>
+            <form asp-controller="Authors" asp-action="AddAuthor" method="post">
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <label class="form-label">Name</label>
-                        <input type="text" class="form-control" placeholder="e.g. J. Harmon" />
+                        <label asp-for="Name" class="form-label">Name</label>
+                        <input asp-for="Name" class="form-control" placeholder="e.g. J. Harmon" />
+                        <span asp-validation-for="Name"></span>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Country</label>
-                        <input type="text" class="form-control" placeholder="e.g. United Kingdom" />
+                        <label asp-for="CountryId" class="form-label">Category</label>
+                        <select asp-for="CountryId" class="form-select">
+                            @await Component.InvokeAsync("CountryDropdown")
+                        </select>
+                        <span asp-validation-for="CountryId"></span>
                     </div>
                     <div class="col-12">
-                        <label class="form-label">Biography</label>
-                        <textarea class="form-control" rows="4" placeholder="Short biography of the author..."></textarea>
+                        <label asp-for="Biography" class="form-label">Biography</label>
+                        <textarea asp-for="Biography" class="form-control" rows="4" placeholder="Short biography of the author..."></textarea>
+                        <span asp-validation-for="Biography"></span>
                     </div>
                 </div>
 

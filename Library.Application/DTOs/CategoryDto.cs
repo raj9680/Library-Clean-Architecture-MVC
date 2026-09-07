@@ -1,5 +1,4 @@
 ﻿using Library.Domain.Entities;
-using System.Runtime.CompilerServices;
 
 namespace Library.Application.DTOs
 {
@@ -11,7 +10,7 @@ namespace Library.Application.DTOs
 
 
     // Extension method to Map Category to CategoryDto
-    public static class BookCategoryExtensions
+    public static class CategoryExtensions
     {
         public static CategoryDto ToCategory(this Category category)
         {

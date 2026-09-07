@@ -10,7 +10,9 @@ namespace Library.Application.DTOs
         public string? BookTitle { get; set; }
         public string? ISBN { get; set; }
         public string? Category { get; set; }
+        public Guid? CategoryId { get; set; }
         public string? Author { get; set; }
+        public Guid? AuthorId { get; set; }
         public string? Publisher { get; set; }
         public DateTime? PublishDate { get; set; }
         public int? TotalCopies { get; set; }
@@ -31,6 +33,7 @@ namespace Library.Application.DTOs
                 BookTitle = book?.Title,
                 ISBN = book?.ISBN,
                 Category = book?.Category?.Name,
+                CategoryId = book?.Category?.Id,
                 Author = book?.Author?.Name,
                 Publisher = book?.Publisher,
                 PublishDate = book?.PublishDate,

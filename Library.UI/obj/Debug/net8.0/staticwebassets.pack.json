@@ -9,6 +9,18 @@
       "PackagePath": "staticwebassets\\img\\32f8fb33-cf1c-47e9-b729-58edc091a3d3.jpeg"
     },
     {
+      "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\596c1758-b69e-4a13-838f-48a7b9e5e3db.jpg",
+      "PackagePath": "staticwebassets\\img\\596c1758-b69e-4a13-838f-48a7b9e5e3db.jpg"
+    },
+    {
+      "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\83df9c8e-1169-43a5-ac5e-7a4a74ffee4f.webp",
+      "PackagePath": "staticwebassets\\img\\83df9c8e-1169-43a5-ac5e-7a4a74ffee4f.webp"
+    },
+    {
+      "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\9f8bd958-6eaa-442b-851c-14a20778f1bb.png",
+      "PackagePath": "staticwebassets\\img\\9f8bd958-6eaa-442b-851c-14a20778f1bb.png"
+    },
+    {
       "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\b512b7bf-1f52-42a8-92eb-c4c93716f1b5.jpeg",
       "PackagePath": "staticwebassets\\img\\b512b7bf-1f52-42a8-92eb-c4c93716f1b5.jpeg"
     },
@@ -23,6 +35,10 @@
     {
       "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\profile.png",
       "PackagePath": "staticwebassets\\img\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\img\\writer-clipart-xl.png",
+      "PackagePath": "staticwebassets\\img\\writer-clipart-xl.png"
     },
     {
       "Id": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\wwwroot\\js\\app.js",

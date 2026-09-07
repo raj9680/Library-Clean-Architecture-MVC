@@ -18,6 +18,7 @@ namespace Library.Infrastructure
             services.AddScoped<IBookService, BookService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IAuthorService, AuthorService>();
+            services.AddScoped<ICountryService, CountryService>();
 
             return services;
         }
