@@ -7,41 +7,64 @@
     </div>
 
     <div class="panel">
+        @if (TempData["IssueResult"] != null)
+        {
+            int issueResult = Convert.ToInt32(TempData["IssueResult"]);
+
+            if (issueResult == 0)
+            {
+                <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+                    <strong>Unable to Issue Book.</strong>
+                    Opps! The Book cannot be issued!.
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Close">
+                    </button>
+                </div>
+            }
+            else if(issueResult == 1)
+            {
+                <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                    <strong>Congrats, Book Issued.</strong>
+                    The Book is issued successfully!
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Close">
+                    </button>
+                </div>
+            }
+        }
         <div class="panel-body">
-            <form>
+            <form asp-controller="Books" asp-action="IssueBook" method="post">
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <label class="form-label">Select Member</label>
-                        <select class="form-select">
-                            <option value="">Choose a member...</option>
-                            <option>Amanpreet Kaur</option>
-                            <option>Rohit Sharma</option>
-                            <option>Simran Kaur</option>
+                        <label name="TMemberId" class="form-label">Select Member</label>
+                        <select name="TMemberId" class="form-select">
+                            @await Component.InvokeAsync("MemberDropdown")
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Select Book</label>
-                        <select class="form-select">
-                            <option value="">Choose a book...</option>
-                            <option>The Silent Observer</option>
-                            <option>Principles of Database Design</option>
-                            <option>A History of Modern Punjab</option>
+                        <label name="BookId" class="form-label">Select Book</label>
+                        <select name="BookId" class="form-select">
+                            @await Component.InvokeAsync("BookDropdown")
                         </select>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Issue Date</label>
-                        <input type="date" class="form-control" />
+                        <label name="IssueDate" class="form-label">Issue Date</label>
+                        <input name="IssueDate" type="date" class="form-control" />
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Due Date</label>
-                        <input type="date" class="form-control" />
+                        <label name="DueDate" class="form-label">Due Date</label>
+                        <input name="DueDate" type="date"  class="form-control" />
                     </div>
                 </div>
 
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary"><i class="bi bi-box-arrow-right"></i> Issue Book</button>
-                    <a href="dashboard.html" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
+                    <a asp-controller="Books" asp-action="Index" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
                 </div>
             </form>
         </div>

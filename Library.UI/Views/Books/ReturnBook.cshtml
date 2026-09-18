@@ -11,41 +11,108 @@
         <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-search"></i> Search</button>
     </div>
 
-    <div class="panel">
+    <form class="panel" asp-controller="Books" asp-action="ReturnBook" method="post">
         <div class="panel-body">
             <div class="row g-3 mb-3">
                 <div class="col-md-6">
                     <label class="form-label">Member</label>
-                    <input type="text" class="form-control" value="Simran Kaur" readonly />
+                    <select name="TMemberId" id="TMemberId" class="form-select">
+                        <option value="">-- Select Member --</option>
+                    </select>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Book</label>
-                    <input type="text" class="form-control" value="Principles of Database Design" readonly />
+                    <select name="BookId" id="BookId" class="form-select">
+                        <option value="">-- Assigned Books --</option>
+                    </select>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Issue Date</label>
-                    <input type="date" class="form-control" value="2026-06-25" readonly />
+                    <input type="date" name="IssueDate" id="IssueDate" class="form-control" value="" readonly />
                 </div>
                 <div class="col-md-4">
                     <label class="form-label">Due Date</label>
-                    <input type="date" class="form-control" value="2026-07-09" readonly />
+                    <input type="date" name="DueDate" id="DueDate" class="form-control" value="" readonly />
                 </div>
                 <div class="col-md-4">
                     <label class="form-label">Return Date</label>
-                    <input type="date" class="form-control" />
+                    <input type="date" name="ReturnDate" id="ReturnDate" class="form-control" value="" />
+                    <input id="TransactionId" name="TransactionId" hidden value="" />
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Fine</label>
-                    <input type="text" class="form-control" placeholder="Calculated automatically" readonly />
+                    <input type="text" name="CalculatedFine" class="form-control" placeholder="Calculated automatically" readonly />
                 </div>
             </div>
 
             <div class="form-actions">
-                <button type="button" class="btn btn-primary"><i class="bi bi-box-arrow-in-left"></i> Return Book</button>
-                <a href="dashboard.html" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
+                <button type="submit" class="btn btn-primary"><i class="bi bi-box-arrow-in-left"></i> Return Book</button>
+                <a asp-controller="Books" asp-action="Index" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
             </div>
         </div>
-    </div>
+    </form>
 </main>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+
+        const memberDropdown = document.getElementById("TMemberId");
+        const bookDropdown = document.getElementById("BookId");
+
+        // Load members on page load
+        try {
+            const response = await fetch("/Books/GetTransactingMembers");
+            if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+
+            const members = await response.json();
+            members.forEach(member => {
+                const option = document.createElement("option");
+                option.value = member.id;
+                option.textContent = member.name;
+                memberDropdown.appendChild(option);
+            });
+        } catch (error) {
+            console.error("Error loading members:", error);
+        }
+
+        // Load books when member changes
+        memberDropdown.addEventListener("change", async function () {
+            bookDropdown.innerHTML = '<option value="">-- Assigned Books --</option>';
+            document.getElementById("IssueDate").value = "";
+            document.getElementById("DueDate").value = "";
+
+            if (!this.value) return;
+
+            try {
+                const response = await fetch(`/Books/GetTransactingBooks?Id=${encodeURIComponent(this.value)}`);
+                if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+
+                const books = await response.json();
+                books.forEach(book => {
+                    const option = document.createElement("option");
+                    option.value = book.id;
+                    option.textContent = book.name;
+                    option.dataset.issueDate = book.issueDate;
+                    option.dataset.dueDate = book.dueDate;
+                    option.dataset.transactionId = book.transactionId;
+
+                    bookDropdown.appendChild(option);
+                });
+            } catch (error) {
+                console.error("Error loading books:", error);
+            }
+        });
+
+        // Set date fields when book changes
+        bookDropdown.addEventListener("change", function () {
+            const selected = this.options[this.selectedIndex];
+            document.getElementById("IssueDate").value = selected.dataset.issueDate ?? "";
+            document.getElementById("DueDate").value = selected.dataset.dueDate ?? "";
+            document.getElementById("TransactionId").value = selected.dataset.transactionId ?? "";
+        });
+
+    });
+
+
+</script>

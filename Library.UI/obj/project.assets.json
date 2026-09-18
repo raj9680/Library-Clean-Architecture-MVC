@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
     "net8.0": {
       "Azure.Core/1.25.0": {
@@ -4110,24 +4110,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aryan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\raj.kumar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\Library.UI.csproj",
+      "projectUniqueName": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\Library.UI.csproj",
       "projectName": "Library.UI",
-      "projectPath": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\Library.UI.csproj",
-      "packagesPath": "C:\\Users\\aryan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.UI\\obj\\",
+      "projectPath": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\Library.UI.csproj",
+      "packagesPath": "C:\\Users\\raj.kumar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.UI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\aryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\raj.kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4140,14 +4135,13 @@
       },
       "frameworks": {
         "net8.0": {
-          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.Application\\Library.Application.csproj": {
-              "projectPath": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.Application\\Library.Application.csproj"
+            "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Application\\Library.Application.csproj": {
+              "projectPath": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Application\\Library.Application.csproj"
             },
-            "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.Infrastructure\\Library.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\aryan\\OneDrive\\Desktop\\Library-Clean-Architecture-MVC\\Library.Infrastructure\\Library.Infrastructure.csproj"
+            "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Infrastructure\\Library.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\raj.kumar\\Documents\\Library-Clean-Architecture-MVC\\Library.Infrastructure\\Library.Infrastructure.csproj"
             }
           }
         }
@@ -4161,12 +4155,10 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "10.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
-        "framework": "net8.0",
         "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Tools": {
@@ -4195,7 +4187,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<CategoryDto>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -8,10 +9,46 @@
         <a asp-controller="Categories" asp-action="AddCategory" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg"></i> Add Category</a>
     </div>
 
-    <div class="toolbar">
-        <input type="search" class="form-control form-control-sm" style="max-width: 280px;" placeholder="Search categories..." />
-        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-search"></i> Search</button>
-    </div>
+    <form class="toolbar" asp-controller="Categories" asp-action="Index" method="get">
+        <input type="search" name="searchByName" class="form-control form-control-sm" style="max-width: 280px;" value="@ViewBag.SearchBy" placeholder="Search categories..." />
+        <button type="submit" class="btn btn-sm btn-outline-secondary"><i class="bi bi-search"></i> Search</button>
+        <a asp-controller="Categories" asp-action="Index">Clear Search</a>
+    </form>
+    @if (TempData["DeletedResult"] != null)
+    {
+        int deletedResult = Convert.ToInt32(TempData["DeletedResult"]);
+
+        if (deletedResult == 457)
+        {
+            <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+                <strong>Unable to delete Category.</strong>
+                This category cannot be deleted because it is associated to one or more book.
+
+                <button type="button"class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+            </div>
+        }
+        else if (deletedResult == 1)
+        {
+            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                <strong>Category deleted successfully.</strong>
+                The category has been removed successfully.
+
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+            </div>
+        }
+        else if (deletedResult == 0)
+        {
+            <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                <strong>Something went wrong.</strong>
+                The category could not be deleted. Please try again.
+
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+            </div>
+        }
+    }
 
     <div class="panel">
         <div class="panel-body p-0">
@@ -25,16 +62,17 @@
                         </tr>
                     </thead>
                     <tbody>
-
-                        <tr>
-                            <td>Fiction</td>
-                            <td>412</td>
-                            <td class="action-icons">
-                                <a asp-controller="Categories" asp-action="EditCategory" title="Edit"><i class="bi bi-pencil"></i></a>
-                                <a asp-controller="Categories" asp-action="DeleteCategory" class="btn-delete text-danger" data-name="Fiction" title="Delete"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
-                        
+                        @foreach(var category in Model)
+                        {
+                            <tr>
+                                <td>@category.Name</td>
+                                <td>412</td>
+                                <td class="action-icons">
+                                    <a asp-controller="Categories" asp-action="EditCategory" asp-route-id="@category.Id" ><i class="bi bi-pencil"></i></a>
+                                    <a asp-controller="Categories" asp-action="DeleteCategory" asp-route-id="@category.Id" class="btn-delete text-danger"><i class="bi bi-trash"></i></a>
+                                </td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>

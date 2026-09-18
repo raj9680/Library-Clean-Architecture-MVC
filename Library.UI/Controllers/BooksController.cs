@@ -1,6 +1,7 @@
 ﻿using Library.Application.DTOs;
 using Library.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 
 namespace Library.UI.Controllers
 {
@@ -115,25 +116,91 @@ namespace Library.UI.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult IssueBook()
+
+        public async Task<IActionResult> IssueBook(int result = 10)
         {
+            TempData["IssueResult"] = result;
             return View();
         }
-        
-        public IActionResult ReturnBook()
+
+
+        [HttpPost]
+        public async Task<IActionResult> IssueBook(AllBookTransactionDto transactionDto)
         {
+            int res = 0;
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("IssueBook", new { result = res });
+            }
+
+            AllBookTransactionDto transaction = await _bookService.IssueBookAsync(transactionDto);
+            if (transaction == null)
+            {
+                return RedirectToAction("IssueBook", new { result = res });
+            }
+            res = 1;
+
+            return RedirectToAction("IssueBook", new { result = res });
+        }
+        
+        public IActionResult ReturnBook(int result = 10)
+        {
+            TempData["IssueResult"] = result;
             return View();
         }
 
         public async Task<IActionResult> DeleteBook(Guid bookId)
         {
-            int result = 0;
+            int res = 0;
             if (bookId == Guid.Empty)
-                return RedirectToAction("Index", new {result = result });
+                return RedirectToAction("Index", new { result = res });
 
-            result = await _bookService.DeleteBookAsync(bookId);
+            res = await _bookService.DeleteBookAsync(bookId);
 
-            return RedirectToAction("Index", new {result = result });
+            return RedirectToAction("Index", new {result = res });
+        }
+
+
+        public async Task<IActionResult> GetTransactingMembers()
+        {
+            var members = await _bookService.GetTransactingMembersAsync();
+            return Json(members.Select(x => new
+            {
+                Id = x.Id,
+                Name = x.Name
+            }));
+        }
+
+        public async Task<IActionResult> GetTransactingBooks(Guid? Id)
+        {
+            var books = await _bookService.GetTransactingBooksAsync(Id);
+
+            return Json(books.Select(x => new
+            {
+                Id = x.BookId,
+                Name = x.BookTitle,
+                IssueDate = x.IssueDate?.ToString("yyyy-MM-dd"),
+                DueDate = x.DueDate?.ToString("yyyy-MM-dd"),
+                ReturnDate = x.ReturnDate?.ToString("yyyy-MM-dd"),
+                CalculatedFine = x.CalculatedFine,
+                TransactionId = x.TransactionId
+
+            }).ToList());
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> ReturnBook(AllBookTransactionDto book)
+        {
+            int res = 0;
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Errors = ModelState.Values.SelectMany(er => er.Errors).Select(x => x.ErrorMessage).ToList();
+                return RedirectToAction("ReturnBook", new { result = res });
+            }
+
+            res = await _bookService.UpdateTransactionAsyc(book);
+            return RedirectToAction("Index", new { result = res });
         }
     }
 }

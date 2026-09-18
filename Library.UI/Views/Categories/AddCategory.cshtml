@@ -1,4 +1,5 @@
-﻿@{
+﻿@model CategoryDto
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <main class="main-content" id="mainContent">
@@ -8,11 +9,12 @@
 
     <div class="panel">
         <div class="panel-body">
-            <form>
+            <form asp-Controller="Categories" asp-action="AddCategory" method="post">
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <label class="form-label">Category Name</label>
-                        <input type="text" class="form-control" placeholder="e.g. Fiction" />
+                        <label asp-for="Name" class="form-label">Category Name</label>
+                        <input asp-for="Name" class="form-control" placeholder="e.g. Fiction" />
+                        <span asp-validation-for="Name"></span>
                     </div>
                     <div class="col-12">
                         <label class="form-label">Description</label>
@@ -22,7 +24,7 @@
 
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Save</button>
-                    <a href="categories.html" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
+                    <a asp-controller="Categories" asp-action="Index" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
                 </div>
             </form>
         </div>

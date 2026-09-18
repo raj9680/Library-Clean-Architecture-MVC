@@ -1,0 +1,16 @@
+﻿@using Library.Application.DTOs
+@model List<BooksDropdownDto>
+
+<option value="">Select Book...</option>
+@foreach (var item in Model)
+{
+    if (item.Id.ToString() == ViewBag.Books)
+    {
+        <option selected="selected" value="@item.Id">@item.Name</option>
+    }
+    else
+    {
+        <option value="@item.Id">@item.Name</option>
+    }
+}
+

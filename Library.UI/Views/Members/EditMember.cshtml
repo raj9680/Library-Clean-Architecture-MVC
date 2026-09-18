@@ -1,4 +1,5 @@
-﻿@{
+﻿@model AllMembersDto
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <main class="main-content" id="mainContent">
@@ -8,32 +9,49 @@
 
     <div class="panel">
         <div class="panel-body">
-            <form>
+            <form asp-controller="Members" asp-action="EditMember" method="post">
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control" placeholder="e.g. Amanpreet Kaur" />
+                        <label asp-for="Name" class="form-label">Full Name</label>
+                        <input asp-for="Name" class="form-control" placeholder="e.g. Amanpreet Kaur" />
+                        <span asp-validation-for="Name"></span>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control" placeholder="e.g. name@example.com" />
+                        <label asp-for="Email" class="form-label">Email</label>
+                        <input asp-for="Email" class="form-control" placeholder="e.g. name@example.com" />
+                        <span asp-validation-for="Email"></span>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Phone</label>
-                        <input type="text" class="form-control" placeholder="e.g. +91 98765 43210" />
+                        <label asp-for=Phone class="form-label">Phone</label>
+                        <input asp-for="Phone" class="form-control" placeholder="e.g. +91 98765 43210" />
+                        <span asp-validation-for="Phone"></span>
                     </div>
+
                     <div class="col-md-6">
-                        <label class="form-label">Status</label>
-                        <select class="form-select">
-                            <option>Active</option>
-                            <option>Inactive</option>
+                        <label asp-for="Status" class="form-label">Status</label>
+                        <select asp-for="Status" class="form-select">
+                            @if(Model.Status == "Active")
+                            {
+                                <option selected="selected" value="Active" >Active</option>
+                                <option value="Inactive">Inactive</option>
+                            } else if(Model.Status == "Inactive")
+                            {
+                                <option value="Active">Active</option>
+                                <option selected="selected" value="Inactive">Inactive</option>
+                            }
+                            else
+                            {
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                            }
+                            
                         </select>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Address</label>
-                        <input type="text" class="form-control" placeholder="e.g. Ludhiana, Punjab" />
+                        <label asp-for="Address" class="form-label">Address</label>
+                        <input asp-for="Address" class="form-control" placeholder="e.g. Ludhiana, Punjab" />
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Photo</label>
@@ -43,7 +61,7 @@
 
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Save</button>
-                    <a href="members.html" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
+                    <a asp-controller="Members" asp-action="Index" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Cancel</a>
                 </div>
             </form>
         </div>

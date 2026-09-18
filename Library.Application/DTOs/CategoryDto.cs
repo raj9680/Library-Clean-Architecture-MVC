@@ -1,10 +1,12 @@
 ﻿using Library.Domain.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace Library.Application.DTOs
 {
     public class CategoryDto
     {
         public Guid? Id { get; set; }
+        [Required(ErrorMessage ="Name cannot be emptied")]
         public string? Name { get; set; }
     }
 

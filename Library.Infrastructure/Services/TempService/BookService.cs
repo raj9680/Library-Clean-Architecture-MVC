@@ -192,5 +192,106 @@ namespace Library.Infrastructure.Services.TempService
             }
             return result;
         }
+
+        public async Task<List<BooksDropdownDto>> GetAllBooks()
+        {
+            List<Book> books = await _dbContext.Books.ToListAsync();
+            List<BooksDropdownDto> book = new List<BooksDropdownDto>();
+
+            foreach(var item in books)
+            {
+                BooksDropdownDto bookDto = new BooksDropdownDto()
+                {
+                    Id = item.Id,
+                    Name = item.Title
+                };
+                book.Add(bookDto);
+            }
+
+            return book;
+        }
+
+        public async Task<AllBookTransactionDto> IssueBookAsync(AllBookTransactionDto bookTransactionDto)
+        {
+            BookTransaction bookTransact = new BookTransaction
+            {
+                Id = Guid.NewGuid(),
+                MemberId = bookTransactionDto.TMemberId,
+                BookId = bookTransactionDto.BookId,
+                IssueDate = bookTransactionDto.IssueDate,
+                DueDate = bookTransactionDto.DueDate,
+            };
+
+            var transact = await _dbContext.BookTransactions.AddAsync(bookTransact);
+            await _dbContext.SaveChangesAsync();
+            return new AllBookTransactionDto
+            {
+                TMemberId = bookTransactionDto.TMemberId,
+                BookId = bookTransactionDto.BookId,
+                DueDate= bookTransactionDto.DueDate,
+                IssueDate= bookTransactionDto.IssueDate
+            };
+        }
+
+        public async Task<List<AllBookTransactionDto>> GetTransactingBooksAsync(Guid? memberId)
+        {
+            var bookss = await _dbContext.BookTransactions.Include(x => x.Book).Where(x => x.MemberId == memberId).ToListAsync();
+            var books = bookss.Select(x => new AllBookTransactionDto
+            {
+                BookId = x.BookId,
+                IssueDate = x.IssueDate,
+                TransactionId = x.Id,
+                DueDate = x.DueDate,
+                ReturnDate = x.ReturnDate,
+                CalculatedFine = x.CalculatedFine,
+                BookTitle = x.Book?.Title?.ToString()
+            }).ToList();
+
+            return books;
+        }
+
+        #region JOINS
+
+
+        public async Task<List<MemberDropdownDto>> GetTransactingMembersAsync()
+        {
+            // Db inner join using LINQ
+            var members = await (
+                from book in _dbContext.BookTransactions
+                join member in _dbContext.Members
+                on book.MemberId equals member.Id
+                select new MemberDropdownDto
+                {
+                    Id = member.Id,
+                    Name = member.Name
+                }).Distinct().ToListAsync();
+
+            return members;
+        }
+
+        public async Task<int> UpdateTransactionAsyc(AllBookTransactionDto transactionDto)
+        {
+            var transact = await _dbContext.BookTransactions.FirstOrDefaultAsync(x => x.Id == transactionDto.TransactionId);
+
+            if (transact != null)
+            {
+                // update entities
+                transact.ReturnDate = transactionDto.ReturnDate;
+                transact.CalculatedFine = transactionDto?.CalculatedFine;
+
+                try
+                {
+                    await _dbContext.SaveChangesAsync();
+                    return 1;
+                } catch (Exception ex)
+                {
+                    throw new KeyNotFoundException("Something goes wrong");
+                }
+            }
+            return 0;
+        }
+
+
+        #endregion
     }
 }
